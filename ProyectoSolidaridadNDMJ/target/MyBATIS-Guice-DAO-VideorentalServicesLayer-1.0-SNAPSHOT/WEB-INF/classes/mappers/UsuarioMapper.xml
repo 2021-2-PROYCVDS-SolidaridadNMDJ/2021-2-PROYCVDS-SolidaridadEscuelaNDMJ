@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.eci.cvds.samples.persistence.mybatisimpl.mappers.UsuarioMapper">
+
+    <insert id="registrarUsuario" parameterType='map'>
+        insert into usuario(idcorreo,contraseña,nombre,apellido,rol) values (#{usuario.idcorreo},#{usuario.contraseña},#{usuario.nombre},#{usuario.apellido},#{usuario.rol});
+    </insert>
+
+
+</mapper>
