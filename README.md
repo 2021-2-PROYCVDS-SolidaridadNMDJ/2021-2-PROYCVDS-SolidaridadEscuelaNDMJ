@@ -1,10 +1,6 @@
 # 2021-2-PROYCVDS-SolidaridadEscuelaNDMJ
 ## Proyecto Final CVDS 2021 - 2
 ### Integrantes: 
-**-Nicolas Camacho** \
-**-Mateo Mejia** \
-**-Julian Peña** \
-**-David Pérez** 
 
 |     Nombre    |     Rol         |
 |--------------|------------- |
