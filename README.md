@@ -6,9 +6,9 @@
 |--------------|------------- |
 |Oscar Ospina	|Product Owner    |
 |Nicolas Camacho |Scrum Master / UX   
-|Mateo Mejia |Developer   |
-|Julian Peña |Developer   |
-|David Pérez |Developer   |
+|Mateo Mejia |Developer Back   |
+|Julian Peña |Developer Front |
+|David Pérez |Developer Back  |
 
 
 [![CircleCI](https://circleci.com/gh/Haatom/2021-2-PROYCVDS-SolidaridadEscuelaNDMJ/tree/circleci-project-setup.svg?style=svg)](https://circleci.com/gh/Haatom/2021-2-PROYCVDS-SolidaridadEscuelaNDMJ/tree/circleci-project-setup)
