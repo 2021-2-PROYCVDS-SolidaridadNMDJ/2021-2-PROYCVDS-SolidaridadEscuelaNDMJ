@@ -1,10 +1,18 @@
 # 2021-2-PROYCVDS-SolidaridadEscuelaNDMJ
-## Proyecto Final CVDS
+## Proyecto Final CVDS 2021 - 2
 ### Integrantes: 
 **-Nicolas Camacho** \
 **-Mateo Mejia** \
 **-Julian Peña** \
 **-David Pérez** 
+
+|     Nombre    |     Rol         |
+|--------------|------------- |
+|Oscar Ospina	|Product Owner    |
+|Nicolas Camacho |Scrum Master / UX   
+|Mateo Mejia |Developer   |
+|Julian Peña |Developer   |
+|David Pérez |Developer   |
 
 
 [![CircleCI](https://circleci.com/gh/Haatom/2021-2-PROYCVDS-SolidaridadEscuelaNDMJ/tree/circleci-project-setup.svg?style=svg)](https://circleci.com/gh/Haatom/2021-2-PROYCVDS-SolidaridadEscuelaNDMJ/tree/circleci-project-setup)
