@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:color="http://java.sun.com/jsf/html" lang="en"
+    xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+
+<head>
+    <title>
+        Login
+    </title>
+</head>
+<h:body>
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" action="">
+                    <span class="login100-form-logo">
+                        <img src="images/icons/logo.png" width="80" height="70" alt="" /> </span>
+                    <br></br>
+                    <center>
+                        <h1>Login</h1>
+                    </center>
+                    <br></br>
+                    <div class="wrap-input100 validate-input">
+                        <h:outputLabel style="color:white;" for="User" value="Usuario" />
+                        <h:inputText class="input100" id="User" required="true" type="String"
+                            binding="#{loginBean.user}" />
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        <h:outputLabel style="color:white;" for="Password" value="Contraseña" />
+                        <h:inputText class="input100" id="Password" required="true" type="String"
+                            binding="#{loginBean.password}" />
+                    </div>
+                    <h:form>
+                        <p:commandButton class="login100-form-btn" value="Login" actionListener="#{loginBean.login}" ajax="true">
+                        </p:commandButton>
+                    </h:form>
+                </form>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>

@@ -5,9 +5,9 @@ machine:
 
 deployment:
   staging:
-    branch: master
+    branch: main
     heroku: 
-      appname: cvds02
+      appname: solidaridadescuelandmj
 workflows:
   version: 2
   build_and_test:
