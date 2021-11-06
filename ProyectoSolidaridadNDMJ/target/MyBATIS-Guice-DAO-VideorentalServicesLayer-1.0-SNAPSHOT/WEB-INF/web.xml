@@ -21,7 +21,7 @@
   </servlet-mapping>
 
   <welcome-file-list>
-    <welcome-file>faces/Sign_in/sign_up.xhtml</welcome-file>
+    <welcome-file>faces/sign_up.xhtml</welcome-file>
   </welcome-file-list>
 
   <listener>

@@ -28,7 +28,7 @@
     <listener-class>edu.eci.cvds.guice.GuiceContextListener</listener-class>
   </listener>
 
-  <listener>
+  <!--<listener>
     <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
   </listener>
   <filter>
@@ -50,7 +50,7 @@
   <error-page>
     <error-code>404</error-code>
     <location>/404.html</location>
-  </error-page>
+  </error-page>-->
 
 
 </web-app>
