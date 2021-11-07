@@ -4,8 +4,7 @@ import org.postgresql.util.PSQLException;
 
 public interface CategoriasService {
     public void registrarCategoria(Categoria categoria) throws SolidaridadException;
-    public void actualizarCategoria(String categoriaNombre, String nombre, String descripcion, String estado)
-            throws SolidaridadException, PSQLException;
+
 
     public Categoria consultarCategoria(String nombre) throws SolidaridadException;
     
