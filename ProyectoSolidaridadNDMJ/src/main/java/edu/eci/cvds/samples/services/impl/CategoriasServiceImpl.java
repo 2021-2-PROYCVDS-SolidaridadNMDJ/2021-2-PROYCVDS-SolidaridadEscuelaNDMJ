@@ -21,17 +21,6 @@ public class CategoriasServiceImpl implements CategoriasService {
         }
     }
 
-
-    @Override
-    public void actualizarCategoria(String categoriaNombre, String nombre, String descripcion, String estado) throws SolidaridadException, PSQLException {
-        try{
-            Categoria categoria = consultarCategoria(categoriaNombre);
-            categoriasDAO.update(categoria,nombre,descripcion,estado);
-        }catch (Exception e){
-            throw new SolidaridadException("No es posible realizar la actualización de la categoria: " + nombre);
-        }
-    }
-
   
     @Override
     public Categoria consultarCategoria(String nombre) throws SolidaridadException {
