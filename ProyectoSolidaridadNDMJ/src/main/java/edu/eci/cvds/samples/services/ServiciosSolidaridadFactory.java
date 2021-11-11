@@ -18,6 +18,8 @@ import edu.eci.cvds.samples.persistence.*;
 import edu.eci.cvds.samples.persistence.mybatisimpl.*;
 import edu.eci.cvds.samples.services.impl.CategoriasServiceImpl;
 import edu.eci.cvds.samples.services.impl.ServicioUsuarioIMPL;
+//import edu.eci.cvds.security.Logger;
+//import edu.eci.cvds.security.ShiroLogger;
 
 
 public class ServiciosSolidaridadFactory {
@@ -34,6 +36,7 @@ public class ServiciosSolidaridadFactory {
                 bind(DAOUsuario.class).to(MyBatisDAOUsuario.class);
                 bind(CategoriasDAO.class).to(MyBatisDAOCategoria.class);
                 bind(ServicioUsuario.class).to(ServicioUsuarioIMPL.class);
+                //bind(Logger.class).to(ShiroLogger.class);
             }
         });
     }

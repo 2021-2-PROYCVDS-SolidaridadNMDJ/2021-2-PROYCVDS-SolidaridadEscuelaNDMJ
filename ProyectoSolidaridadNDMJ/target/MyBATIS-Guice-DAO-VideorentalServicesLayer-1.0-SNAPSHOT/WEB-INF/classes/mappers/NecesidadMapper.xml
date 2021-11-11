@@ -22,9 +22,9 @@
         <result property="fechaCreacion" column="fechacreacion"/>
         <result property="estado" column="estado"/>
         <result property="fechaModificacion" column="fechamodificacion"/>
-
-    <association property=""
     </resultMap>
+
+    
 
 
 

@@ -3,7 +3,6 @@ edu\eci\cvds\samples\services\NecesidadService.class
 edu\eci\cvds\samples\persistence\mybatisimpl\MyBatisDAOUsuario.class
 edu\eci\cvds\samples\services\impl\ServicioUsuarioIMPL.class
 edu\eci\cvds\samples\entities\Usuario.class
-edu\eci\cvds\security\Logger.class
 edu\eci\cvds\guice\GuiceContextListener$1.class
 edu\eci\cvds\samples\persistence\mybatisimpl\mappers\CategoriaMapper.class
 edu\eci\cvds\samples\beans\RegistroBean.class
@@ -18,7 +17,6 @@ edu\eci\cvds\guice\GuiceContextListener.class
 edu\eci\cvds\samples\beans\CategoriaBean.class
 edu\eci\cvds\samples\services\ServicioUsuario.class
 edu\eci\cvds\samples\persistence\mybatisimpl\mappers\NecesidadMapper.class
-edu\eci\cvds\security\ShiroLogger.class
 edu\eci\cvds\samples\persistence\CategoriasDAO.class
 edu\eci\cvds\samples\beans\BaseBean.class
 edu\eci\cvds\samples\entities\Categoria.class
