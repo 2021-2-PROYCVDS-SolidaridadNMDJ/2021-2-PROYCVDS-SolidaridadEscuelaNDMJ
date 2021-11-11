@@ -1,27 +1,27 @@
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\CategoriasService.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\entities\Categoria.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\impl\CategoriasServiceImpl.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\beans\BaseBean.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\impl\ServicioUsuarioIMPL.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\DAOUsuario.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\MyBatisDAONecesidad.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\security\ShiroLogger.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\beans\LoginBean.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\mappers\NecesidadMapper.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\NecesidadDAO.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\mappers\CategoriaMapper.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\SolidaridadException.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\NecesidadService.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\guice\GuiceContextListener.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\beans\CategoriaBean.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\entities\Necesidad.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\mappers\UsuarioMapper.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\impl\NecesidadServiceIMPL.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\beans\RegistroBean.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\CategoriasDAO.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\MyBatisDAOCategoria.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\ServicioUsuario.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\entities\Usuario.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\security\Logger.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\MyBatisDAOUsuario.java
-C:\Users\david\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\ServiciosSolidaridadFactory.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\impl\NecesidadServiceIMPL.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\beans\RegistroBean.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\mappers\UsuarioMapper.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\NecesidadService.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\impl\ServicioUsuarioIMPL.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\beans\BaseBean.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\entities\Categoria.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\security\ShiroLogger.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\SolidaridadException.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\ServiciosSolidaridadFactory.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\MyBatisDAOUsuario.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\entities\Necesidad.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\entities\Usuario.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\CategoriasDAO.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\DAOUsuario.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\mappers\CategoriaMapper.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\MyBatisDAONecesidad.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\NecesidadDAO.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\ServicioUsuario.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\security\Logger.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\beans\CategoriaBean.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\impl\CategoriasServiceImpl.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\services\CategoriasService.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\beans\LoginBean.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\guice\GuiceContextListener.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\mappers\NecesidadMapper.java
+C:\Users\Julian\Desktop\Proyecto CVDS\NDMJ\ProyectoSolidaridadNDMJ\src\main\java\edu\eci\cvds\samples\persistence\mybatisimpl\MyBatisDAOCategoria.java

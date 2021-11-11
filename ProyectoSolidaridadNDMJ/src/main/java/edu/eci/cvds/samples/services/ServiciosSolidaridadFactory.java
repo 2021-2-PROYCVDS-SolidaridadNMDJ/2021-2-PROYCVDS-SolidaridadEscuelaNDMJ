@@ -32,6 +32,7 @@ public class ServiciosSolidaridadFactory {
                 setEnvironmentId(env);
                 setClassPathResource(pathResource);
                 bind(DAOUsuario.class).to(MyBatisDAOUsuario.class);
+                bind(CategoriasDAO.class).to(MyBatisDAOCategoria.class);
                 bind(ServicioUsuario.class).to(ServicioUsuarioIMPL.class);
             }
         });

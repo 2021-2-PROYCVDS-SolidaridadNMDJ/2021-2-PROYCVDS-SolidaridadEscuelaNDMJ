@@ -5,6 +5,9 @@ import edu.eci.cvds.samples.persistence.*;
 import edu.eci.cvds.samples.persistence.mybatisimpl.*;
 import edu.eci.cvds.samples.services.*;
 import edu.eci.cvds.samples.services.impl.*;
+import edu.eci.cvds.security.Logger;
+import edu.eci.cvds.security.ShiroLogger;
+
 import org.mybatis.guice.XMLMyBatisModule;
 import org.mybatis.guice.datasource.helper.JdbcHelper;
 import javax.servlet.ServletContext;
@@ -57,7 +60,9 @@ public class GuiceContextListener implements ServletContextListener {
 
                 bind(CategoriasService.class).to(CategoriasServiceImpl.class);
 
-                // bind(LoginSegurity.class).to(Shiro.class);
+                bind(NecesidadDAO.class).to(MyBatisDAONecesidad.class);
+
+                bind(Logger.class).to(ShiroLogger.class);
             }
         });
         servletContextEvent.getServletContext().setAttribute(Injector.class.getName(), injector);
