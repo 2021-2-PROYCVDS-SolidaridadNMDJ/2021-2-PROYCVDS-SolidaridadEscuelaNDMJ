@@ -28,5 +28,25 @@ public class CategoriaBean extends BaseBean{
         }
     }
 
+    public void eliminarCategoria( String nombre, String idCategoria)throws SolidaridadException{
+        try{
+            categoriasService.eliminarCategoria(nombre, idCategoria);
+        }catch (Exception e){
+            
+            e.printStackTrace();
+        }
+    }
+
+    public void registrarCategoria( String nombre, String descripcion)throws SolidaridadExceptio{
+
+        try{
+           
+                categoriasService.registrarCategoria(new Categoria(nombre, descripcion));
+
+         } catch (Exception e){
+                throw new SolidaridadException("La categoria no es valida");
+            }
+        }
+
 
 }
