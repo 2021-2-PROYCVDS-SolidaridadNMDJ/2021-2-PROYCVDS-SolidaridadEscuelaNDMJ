@@ -37,7 +37,7 @@ public class CategoriaBean extends BaseBean{
         }
     }
 
-    public void registrarCategoria( String nombre, String descripcion)throws SolidaridadExceptio{
+    public void registrarCategoria( String nombre, String descripcion)throws SolidaridadException{
 
         try{
            

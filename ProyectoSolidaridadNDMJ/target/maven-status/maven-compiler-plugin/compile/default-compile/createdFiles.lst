@@ -14,7 +14,6 @@ edu\eci\cvds\samples\services\impl\NecesidadServiceIMPL.class
 edu\eci\cvds\samples\beans\LoginBean.class
 edu\eci\cvds\samples\services\ServiciosSolidaridadFactory$1.class
 edu\eci\cvds\guice\GuiceContextListener.class
-edu\eci\cvds\samples\beans\CategoriaBean.class
 edu\eci\cvds\samples\services\ServicioUsuario.class
 edu\eci\cvds\samples\persistence\mybatisimpl\mappers\NecesidadMapper.class
 edu\eci\cvds\samples\persistence\CategoriasDAO.class
