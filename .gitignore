@@ -1,0 +1,6 @@
+/target/
+.#*
+*.log
+/shelf/
+/workspace.xml
+/.idea/
