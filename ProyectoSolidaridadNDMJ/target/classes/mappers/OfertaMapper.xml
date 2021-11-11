@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.eci.cvds.sampleprj.dao.mybatis.mappers.OfertaMapper">
+
+    <select id="consultarOfertas" parameterType="map" resultMap="OfertaResult">
+        select * from ofertas;
+    </select>
+
+    <insert parameterType="map" id="insertarOferta">
+        insert into ofertas(idoferta,idcategoria,nombre,descripcion,fechacreacion,estado,fechamodificacion,nickname) values
+        (#{oferta.idOferta},#{oferta.idCategoria},#{oferta.nombre},#{oferta.descripcion},#{oferta.fechacreacion},
+        #{oferta.estado},#{oferta.fechamodificacion},#{oferta.nickname})
+    </insert>
+
+    <select id="consultarOferta" parameterType="map" resultMap="OfertaResult">
+        select * from ofertas where nombre=#{nombre};
+    </select>
+
+    <resultMap id="OfertaResult" type="Oferta" >
+        <id property="idOferta" column="idoferta"/>
+            <result property="idCategoria" column="idcategoria"/>
+            <result property="nombre" column="nombre" />
+            <result property="descripcion" column="descripcion" />
+            <result property="fechacreacion" column="fechacreacion" />
+            <result property="estado " column="estado " />
+            <result property="fechamodificacion" column="fechamodificacion" />
+            <result property="nickname" column="nickname" />
+    </resultMap>
+
+</mapper>
