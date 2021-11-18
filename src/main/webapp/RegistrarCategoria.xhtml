@@ -8,24 +8,25 @@
     <title> Registrar Categorias </title>
 </h:head>
 
-<h:body>
-    <h1>Registrar Categoria</h1>
-    <h:outputLabel for="nombre" value="Nombre Categoria: "/>
-    <h:inputText id="nombre" type="String" binding="#{nombre}"/>
-    <h:commandButton actionListener="#{CategoriaBean.registrarCategoria(nombre.value,descripcion.value)}" value="Registrar CategoriaH"/>
-    <p:commandButton actionListener="#{CategoriasBean.registrarCategoria(nombre.value,descripcion.value)}" value="Registrar CategoriaP"/>
+<h:body style="background-color:#00ccff;">
+    
+        <h1>Registrar Categoria</h1>
+    
+    
+    
     <input type="button" value="Click me"/>
     <h:form>
         <h2>Hola Mundo</h2>
         <h:panelGrid id="grid" cellpadding="2" columns="2">
 
-           
+            <p:outputLabel for="nombre" value="Nombre Categoria: "/>
+            <p:inputText id="nombre" type="String" binding="#{nombre}"/>
 
             <p:outputLabel for="descripcion" value="Descripcion Categoria: "/>
             <p:inputText id="descripcion" type="String" binding="#{descripcion}"/>
         </h:panelGrid>
         <p:commandButton actionListener="#{CategoriasBean.registrarCategoria(nombre.value,descripcion.value)}" value="Registrar Categoria"/>
-        <input type="button" value="PruebaXD"/>
+        
     </h:form>
     
 
