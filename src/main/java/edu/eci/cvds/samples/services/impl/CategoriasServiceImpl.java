@@ -31,6 +31,16 @@ public class CategoriasServiceImpl implements CategoriasService {
             throw new SolidaridadException("La categoria "+nombre+" no existe");
         }
     }
+
+    @Override
+    public List<Categoria> consultarCategorias() throws SolidaridadException {
+        try{
+            return categoriasDAO.load();
+        }catch (Exception e) {
+            e.printStackTrace();
+            throw new SolidaridadException("No se encuentran categorias");
+        }
+    }
  
     @Override
     public void eliminarCategoria(String nombre,String idCategoria) throws SolidaridadException {

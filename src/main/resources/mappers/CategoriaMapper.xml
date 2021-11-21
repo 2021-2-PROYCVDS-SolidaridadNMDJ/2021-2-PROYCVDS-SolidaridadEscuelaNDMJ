@@ -19,6 +19,11 @@
         SELECT * from categoria where nombre=#{nombre};
     </select>
 
+     <select id="consultarCategorias" parameterType='map' resultMap="CategoriasResult">
+        SELECT * from categoria ;
+    </select>
+
+
     <resultMap id="CategoriaResult" type="Categoria">
         <id property="idCategoria" column="idcategoria"/>
         <result property="nombre" column="nombre"/>
