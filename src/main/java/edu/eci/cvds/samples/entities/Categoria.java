@@ -14,7 +14,7 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 public class Categoria {
-    private String idCategoria;
+    private int idCategoria;
     private String nombre;
     private String descripcion;
     private Date fechaDeCreacion;
@@ -22,7 +22,8 @@ public class Categoria {
     private Date fechaDeModificacion;
     
     public Categoria(String nombre, String descripcion){
-        this.idCategoria = UUID.randomUUID().toString();
+        int random = (int)(Math.random()*10000+1);
+        this.idCategoria = 10000+ random;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechaDeCreacion = Date.valueOf(LocalDate.now());
@@ -34,11 +35,11 @@ public class Categoria {
 
     }
 
-    public String getIdCategoria() {
+    public int getIdCategoria() {
         return idCategoria;
     }
 
-    public void setIdCategoria(String idCategoria) {
+    public void setIdCategoria(int idCategoria) {
         this.idCategoria = idCategoria;
     }
 

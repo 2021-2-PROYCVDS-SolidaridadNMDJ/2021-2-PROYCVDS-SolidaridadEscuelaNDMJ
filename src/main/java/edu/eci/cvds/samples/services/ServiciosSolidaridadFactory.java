@@ -17,6 +17,7 @@ import com.google.inject.Injector;
 import edu.eci.cvds.samples.persistence.*;
 import edu.eci.cvds.samples.persistence.mybatisimpl.*;
 import edu.eci.cvds.samples.services.impl.CategoriasServiceImpl;
+import edu.eci.cvds.samples.services.impl.OfertaServiceIMPL;
 import edu.eci.cvds.samples.services.impl.ServicioUsuarioIMPL;
 //import edu.eci.cvds.security.Logger;
 //import edu.eci.cvds.security.ShiroLogger;
@@ -34,8 +35,15 @@ public class ServiciosSolidaridadFactory {
                 setEnvironmentId(env);
                 setClassPathResource(pathResource);
                 bind(DAOUsuario.class).to(MyBatisDAOUsuario.class);
+
+                bind(CategoriasService.class).to(CategoriasServiceImpl.class);
                 bind(CategoriasDAO.class).to(MyBatisDAOCategoria.class);
+
+                bind(OfertaService.class).to(OfertaServiceIMPL.class);
+                bind(OfertaDAO.class).to(MyBatisDAOOferta.class);
+
                 bind(ServicioUsuario.class).to(ServicioUsuarioIMPL.class);
+                
                 //bind(Logger.class).to(ShiroLogger.class);
             }
         });
