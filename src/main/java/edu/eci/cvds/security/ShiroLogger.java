@@ -1,4 +1,4 @@
-package edu.eci.cvds.security;
+/**package edu.eci.cvds.security;
 
 
 import org.apache.shiro.SecurityUtils;
@@ -45,6 +45,6 @@ import javax.faces.context.FacesContext;
         public boolean isLogged() {
             return SecurityUtils.getSubject().isAuthenticated();
         }
-    }
+    }**/
 
 
