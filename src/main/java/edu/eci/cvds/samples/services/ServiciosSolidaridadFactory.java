@@ -19,8 +19,8 @@ import edu.eci.cvds.samples.persistence.mybatisimpl.*;
 import edu.eci.cvds.samples.services.impl.CategoriasServiceImpl;
 import edu.eci.cvds.samples.services.impl.OfertaServiceIMPL;
 import edu.eci.cvds.samples.services.impl.ServicioUsuarioIMPL;
-//import edu.eci.cvds.security.Logger;
-//import edu.eci.cvds.security.ShiroLogger;
+import edu.eci.cvds.security.Logger;
+import edu.eci.cvds.security.ShiroLogger;
 
 
 public class ServiciosSolidaridadFactory {
@@ -44,7 +44,7 @@ public class ServiciosSolidaridadFactory {
 
                 bind(ServicioUsuario.class).to(ServicioUsuarioIMPL.class);
                 
-                //bind(Logger.class).to(ShiroLogger.class);
+                bind(Logger.class).to(ShiroLogger.class);
             }
         });
     }

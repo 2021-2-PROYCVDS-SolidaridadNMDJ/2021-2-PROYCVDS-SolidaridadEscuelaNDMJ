@@ -6,5 +6,9 @@ import java.util.List;
 
 public interface UsuarioMapper {
 
-    public void registrarUsuario(@Param("usuario")Usuario usuario);
+    public  void registrarUsuario(@Param("usuario")Usuario usuario);
+
+    public  Usuario consultarUsuario(@Param("email")String email);
+
+    public List<Usuario> consultarUsuarios();
 }

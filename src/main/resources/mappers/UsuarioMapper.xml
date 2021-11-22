@@ -5,10 +5,23 @@
 
 <mapper namespace="edu.eci.cvds.samples.persistence.mybatisimpl.mappers.UsuarioMapper">
 
+    <select id="consultarUsuario" parameterType="map" resultMap="UsuarioResult">
+        select * from tblogin tb where tb.idcorreo = #{email};
+
+    <select id="consultarUsuarios" parameterType="map" resultMap="UsuarioResult">
+        select * from tblogin;
+
     <insert id="registrarUsuario" parameterType='map'>
         insert into usuario(idcorreo,contraseña,nombre,apellido,rol) values (#{usuario.idcorreo},#{usuario.contraseña},#{usuario.nombre},#{usuario.apellido},#{usuario.rol});
     </insert>
 
+    <resultMap id="UsuarioResult" type="Usuario">
+        <id property="idcorreo" column="idcorreo"/>
+        <result property="contraseña" column="contraseña"/>
+        <result property="nombre" column="nombre"/>
+        <result property="apellido" column="apellido"/>
+        <result property="rol" column="rol"/>
+    </resultMap>
 
 
 </mapper>

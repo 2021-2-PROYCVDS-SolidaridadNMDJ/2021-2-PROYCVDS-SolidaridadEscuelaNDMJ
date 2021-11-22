@@ -1,4 +1,4 @@
-/**package edu.eci.cvds.security;
+package edu.eci.cvds.security;
 
 //import edu.eci.cvds.samples.services.ExcepcionServiciosBancoProyectos;
 
@@ -15,4 +15,4 @@ public interface Logger {
     public void logout();
 
     public boolean isLogged();
-}*/
+}
