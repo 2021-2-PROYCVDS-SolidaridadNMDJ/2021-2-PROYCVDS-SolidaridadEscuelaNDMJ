@@ -12,6 +12,7 @@ public class CategoriasServiceImpl implements CategoriasService {
     @Inject
     private CategoriasDAO categoriasDAO;
 
+    @Transactional
     @Override
     public void registrarCategoria(Categoria categoria) throws SolidaridadException {
         try{
