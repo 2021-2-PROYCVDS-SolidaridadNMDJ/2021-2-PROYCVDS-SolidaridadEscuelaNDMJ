@@ -44,8 +44,9 @@ public class CategoriaBean extends BaseBean{
                 categoriasService.registrarCategoria(new Categoria(nombre, descripcion));
 
          } catch (Exception e){
-                throw new SolidaridadException("La categoria no es valida");
                 e.printStackTrace();
+                throw new SolidaridadException("La categoria no es valida");
+                
             }
         }
 
