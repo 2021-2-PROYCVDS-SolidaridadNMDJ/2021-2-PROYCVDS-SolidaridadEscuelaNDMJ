@@ -18,6 +18,7 @@ public class CategoriasServiceImpl implements CategoriasService {
             categoriasDAO.save(categoria);
         }catch (Exception e){
             e.printStackTrace();
+            throw new SolidaridadException("Error al insertar categoria");
         }
     }
 

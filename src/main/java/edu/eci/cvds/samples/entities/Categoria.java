@@ -9,12 +9,14 @@
 
 
 package edu.eci.cvds.samples.entities;
+import java.nio.charset.Charset;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.UUID;
+import java.util.Random;
 
 public class Categoria {
-    private int idCategoria;
+    private String idCategoria;
     private String nombre;
     private String descripcion;
     private Date fechaDeCreacion;
@@ -22,8 +24,11 @@ public class Categoria {
     private Date fechaDeModificacion;
     
     public Categoria(String nombre, String descripcion){
-        int random = (int)(Math.random()*10000+1);
-        this.idCategoria = 10000+ random;
+        byte[] array = new byte[10]; // length is bounded by 10
+        new Random().nextBytes(array);
+        String generatedString = new String(array, Charset.forName("UTF-8"));
+        
+        this.idCategoria = generatedString;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechaDeCreacion = Date.valueOf(LocalDate.now());
@@ -35,11 +40,11 @@ public class Categoria {
 
     }
 
-    public int getIdCategoria() {
+    public String getIdCategoria() {
         return idCategoria;
     }
 
-    public void setIdCategoria(int idCategoria) {
+    public void setIdCategoria(String idCategoria) {
         this.idCategoria = idCategoria;
     }
 

@@ -1,22 +1,26 @@
 package edu.eci.cvds.samples.entities;
 import java.io.Serializable;
+import java.nio.charset.Charset;
 import java.time.LocalDate;
 import java.sql.Date;
+import java.util.Random;
 import java.util.UUID;
 
 public class Oferta {
-    private int idOferta;
-    private int idCategoria;
+    private String idOferta;
+    private String idCategoria;
     private String nombre;
     private String descripcion;
     private Date fechacreacion;
     private String estado;
     private Date fechamodificacion;
 
-    public Oferta(int idCategoria,String nombre,String descripcion,String estado){
-        int random = (int)(Math.random()*10000+1);
+    public Oferta(String idCategoria,String nombre,String descripcion,String estado){
+      byte[] array = new byte[10]; // length is bounded by 10
+      new Random().nextBytes(array);
+      String generatedString = new String(array, Charset.forName("UTF-8"));
         
-        this.idOferta= 120000 + random;
+        this.idOferta= generatedString;
         this.idCategoria=idCategoria;
         this.nombre=nombre;
         this.descripcion=descripcion;
@@ -25,15 +29,15 @@ public class Oferta {
         this.fechamodificacion=Date.valueOf(LocalDate.now());
     }
 
-    public int getIdOferta() {
+    public String getIdOferta() {
         return idOferta;
      }
 
-     public void setIdOferta(int idOferta) {
+     public void setIdOferta(String idOferta) {
         this.idOferta = idOferta;
      }
 
-     public int getIdCategoria() {
+     public String getIdCategoria() {
         return this.idCategoria;
      }
 
