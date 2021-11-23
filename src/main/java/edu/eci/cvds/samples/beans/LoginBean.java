@@ -56,6 +56,7 @@ public class LoginBean extends BaseBean {
             session.setAttribute("username", username);
             facesContext.getExternalContext().redirect("/faces/administrador.xhtml");
         }
+        
         /**if(logger.isProponente()){
             HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
             session.setAttribute("username", username);
@@ -79,7 +80,7 @@ public class LoginBean extends BaseBean {
      * @throws IOException
      */
     public void logOut() throws  IOException{
-        FacesContext.getCurrentInstance().getExternalContext().redirect("../login.xhtml");
+        FacesContext.getCurrentInstance().getExternalContext().redirect("/faces/login.xhtml");
         logger.logout();
     }
 
@@ -113,6 +114,7 @@ public class LoginBean extends BaseBean {
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     public void info() {
         FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, message, "PrimeFaces Rocks."));

@@ -6,6 +6,7 @@ import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
+import edu.eci.cvds.samples.services.SolidaridadException;
 
 import javax.faces.context.FacesContext;
 
@@ -14,12 +15,18 @@ import javax.faces.context.FacesContext;
     public class ShiroLogger implements Logger {
 
         @Override
-        public void login(String correo, String password, boolean rememberMe){
+        public void login(String correo, String password, boolean rememberMe) throws SolidaridadException{
+            try{
                 Subject subject = SecurityUtils.getSubject();
                 UsernamePasswordToken token = new UsernamePasswordToken(correo, password, rememberMe);
                 subject.getSession().setAttribute("Correo", correo);
                 subject.login(token);
-        }
+            }catch (UnknownAccountException uae){
+                throw new SolidaridadException("El usuario no esta registrado",uae);
+            }catch (IncorrectCredentialsException ice){
+                throw new SolidaridadException("Credenciales incorrctas",ice);
+            }
+        }   
 
         @Override
         public boolean isAdmin() {
