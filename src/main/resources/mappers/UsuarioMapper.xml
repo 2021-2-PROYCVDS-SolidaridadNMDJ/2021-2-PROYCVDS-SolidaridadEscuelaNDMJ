@@ -7,10 +7,12 @@
 
     <select id="consultarUsuario" parameterType="map" resultMap="UsuarioResult">
         select * from tblogin tb where tb.idcorreo = #{email};
+    </select>
 
     <select id="consultarUsuarios" parameterType="map" resultMap="UsuarioResult">
         select * from tblogin;
-
+    </select>
+    
     <insert id="registrarUsuario" parameterType='map'>
         insert into usuario(idcorreo,contraseña,nombre,apellido,rol) values (#{usuario.idcorreo},#{usuario.contraseña},#{usuario.nombre},#{usuario.apellido},#{usuario.rol});
     </insert>

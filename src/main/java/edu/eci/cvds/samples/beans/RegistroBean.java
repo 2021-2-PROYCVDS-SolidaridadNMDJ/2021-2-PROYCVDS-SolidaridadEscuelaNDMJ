@@ -1,4 +1,4 @@
-/**package edu.eci.cvds.samples.beans;
+package edu.eci.cvds.samples.beans;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -20,4 +20,4 @@ public class RegistroBean extends BaseBean {
         servicio.registrarUsuario(usuario);
         System.out.println(usuario);
     }
-}*/
+}
