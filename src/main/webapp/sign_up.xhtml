@@ -26,30 +26,30 @@
                     </center>
                     <br></br>
                     <div class="wrap-input100 validate-input">
-                        <h:outputLabel style="color:white;" for="Firstname" value="First name"/>
+                        <h:outputLabel style="color:black;" for="Firstname" value="First name"/>
                         <h:inputText class="input100" id="Firstname" required="true" type="String" binding="#{nombre}" />
                     </div>
                     <div class="wrap-input100 validate-input">
-                        <h:outputLabel style="color:white;" for="Lastname" value="Last name"/>
+                        <h:outputLabel style="color:black;" for="Lastname" value="Last name"/>
                         <h:inputText class="input100" id="Lastname"  required="true" type="String" binding="#{apellido}" />
                     </div>
                     <div class="wrap-input100 validate-input">
-                        <h:outputLabel style="color:white;" for="Mail" value="Mail"/>
+                        <h:outputLabel style="color:black;" for="Mail" value="Mail"/>
                         <h:inputText class="input100" id="Mail"  required="true" type="String" binding="#{idCorreo}" />
                     </div>
                     <div class="wrap-input100 validate-input">
-                        <h:outputLabel style="color:white;" for="area" value="Area"/>
+                        <h:outputLabel style="color:black;" for="area" value="Area"/>
                         <h:inputText class="input100" id="area"  required="true" type="String" binding="#{rol}" />
                     </div>
                     <div class="wrap-input100 validate-input">
-                        <h:outputLabel style="color:white;" for="Password" value="Pasword"/>
+                        <h:outputLabel style="color:black;" for="Password" value="Pasword"/>
                         <h:inputSecret class="input100" id="Password"  required="true" type="String" binding="#{contraseña}" />
                     </div>
                     <h:form style="color:black;">
                         <br/>
                         <br/>
                         <div class="container-login100-form-btn">
-                            <p:commandButton class="login100-form-btn" value="Create" actionListener="#{registarbean.registroUsuario(idCorreo.value,nombre.value,apellido.value,password.value,rol.value)}" ajax="true"> </p:commandButton>
+                            <p:commandButton class="login100-form-btn" value="Create" actionListener="#{adminBean.registroUsuario(idCorreo.value,nombre.value,apellido.value,password.value,rol.value)}" ajax="true"> </p:commandButton>
                         </div>
                     </h:form>
                     <br/>

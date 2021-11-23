@@ -1,5 +1,6 @@
 
 package edu.eci.cvds.samples.beans;
+
 import com.google.inject.Injector;
 import javax.annotation.PostConstruct;
 import javax.faces.context.FacesContext;
