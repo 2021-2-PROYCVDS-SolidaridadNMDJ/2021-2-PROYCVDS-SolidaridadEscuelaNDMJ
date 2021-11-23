@@ -45,6 +45,7 @@ public class CategoriaBean extends BaseBean{
 
          } catch (Exception e){
                 throw new SolidaridadException("La categoria no es valida");
+                e.printStackTrace();
             }
         }
 
