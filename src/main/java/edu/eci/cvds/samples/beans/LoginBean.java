@@ -1,84 +1,120 @@
 package edu.eci.cvds.samples.beans;
 
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.logging.Level;
-
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.*;
+import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.*;
-import org.apache.shiro.crypto.hash.Sha256Hash;
-import org.apache.shiro.subject.Subject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.faces.bean.SessionScoped;
+import javax.servlet.http.HttpSession;
+import com.google.inject.Inject;
+import edu.eci.cvds.samples.services.SolidaridadException;
+import edu.eci.cvds.samples.services.ServicioUsuario;
+import edu.eci.cvds.security.Logger;
 
+import java.io.IOException;
+
+@SuppressWarnings("deprecation")
 @ManagedBean(name = "loginBean")
 @SessionScoped
-public class LoginBean implements Serializable {
-
-    private static final Logger log = LoggerFactory.getLogger(LoginBean.class);
-
-    private String user;
+public class LoginBean extends BaseBean {
+    @Inject
+    private ServicioUsuario serviciosUsuario;
+    @Inject
+    private Logger logger;
+    private String username;
     private String password;
-    public boolean logeado = false;
+    private Boolean rememberMe;
+    private String message;
 
-    public void login() {
-        Subject userActual = SecurityUtils.getSubject();
-        UsernamePasswordToken uPToken = new UsernamePasswordToken(getUser(), new Sha256Hash(getPasswd()).toHex());
 
-        try {
-            userActual.login(uPToken);
-            userActual.getSession().setAttribute("correo", user);
-            if (userActual.hasRole("Administrador")) {
-                FacesContext.getCurrentInstance().getExternalContext().redirect("/faces/administrador.xhtml");
-            }
-            setLogeado(true);
-        } catch (UnknownAccountException ex) {
-            error("Unknown account");
-            log.error(ex.getMessage(), ex);
-        } catch (IncorrectCredentialsException ex) {
-            error("Wrong password");
-            log.error(ex.getMessage(), ex);
-        } catch (LockedAccountException ex) {
-            error("Locked account");
-            log.error(ex.getMessage(), ex);
-        } catch (AuthenticationException ex) {
-            error("Unknown error: " + ex.getMessage());
-            log.error(ex.getMessage(), ex);
-        } catch (IOException ex) {
-            error("Unknown error: " + ex.getMessage());
-            log.error(ex.getMessage(), ex);
+    /**
+     * Metodo que permite iniciar sesion a un usuario validando sus credenciales mediante
+     * protocolo HTML
+     * @throws IOException
+     * @throws ExcepcionServiciosBancoProyectos
+     */
+    public void login() throws IOException, SolidaridadException {
+        if(!logger.isLogged()) {
+            logger.login(username, password, false);
+            redirectHome();
+        }
+        else{
+            sesionExistente();
         }
     }
 
-    public String getUser() {
-        return user;
+    public void sesionExistente() throws IOException {
+        this.message = "Ya hay otro usuario logueado";
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        facesContext.getExternalContext().redirect("");
     }
 
-    public void setUser(String user) {
-        this.user = user;
+
+    public void redirectHome() throws IOException {
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        if(logger.isAdmin()){
+            HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+            session.setAttribute("username", username);
+            facesContext.getExternalContext().redirect("../admin/administrador.xhtml");
+        }
+        /**if(logger.isProponente()){
+            HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+            session.setAttribute("username", username);
+            facesContext.getExternalContext().redirect("../proponente/proponente.xhtml");
+        }
+        if(logger.isPMO()){
+            HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+            session.setAttribute("username", username);
+            facesContext.getExternalContext().redirect("../PMO/pmo.xhtml");
+        }**/
     }
 
-    public String getPasswd() {
+    public void redirectBusquedaIniciativas() throws IOException{
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+        facesContext.getExternalContext().redirect("../publico/busquedaIniciativaPalabras.xhtml");
+    }
+
+    /**
+     * Metodo que permite cerrar sesion de usuario
+     * @throws IOException
+     */
+    public void logOut() throws  IOException{
+        FacesContext.getCurrentInstance().getExternalContext().redirect("../login.xhtml");
+        logger.logout();
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Boolean getRememberMe() {
+        return rememberMe;
+    }
+
+    public void setRememberMe(Boolean rememberMe) {
+        this.rememberMe = rememberMe;
+    }
+
+    public String getPassword() {
         return password;
     }
-
-    public void setPasswd(String passwd) {
-        this.password = passwd;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public boolean isLogeado() {
-        return logeado;
+    public String getMessage() {
+        return message;
     }
 
-    public void setLogeado(boolean logeado) {
-        this.logeado = logeado;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    private void error(String message) {
-        FacesContext.getCurrentInstance().addMessage("Shiro",
-                new FacesMessage(FacesMessage.SEVERITY_ERROR, message, "error"));
+    public void info() {
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, message, "PrimeFaces Rocks."));
     }
 }

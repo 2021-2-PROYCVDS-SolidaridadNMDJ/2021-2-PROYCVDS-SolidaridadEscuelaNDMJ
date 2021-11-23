@@ -1,10 +1,10 @@
-/**package edu.eci.cvds.security;
+package edu.eci.cvds.security;
 
-//import edu.eci.cvds.samples.services.ExcepcionServiciosBancoProyectos;
+import edu.eci.cvds.samples.services.SolidaridadException;
 
 public interface Logger {
 
-    public void login(String correo , String password , boolean rememberMe);
+    public void login(String correo , String password , boolean rememberMe) throws SolidaridadException ;
 
     public boolean isAdmin();
 
@@ -15,4 +15,4 @@ public interface Logger {
     public void logout();
 
     public boolean isLogged();
-}**/
+}
