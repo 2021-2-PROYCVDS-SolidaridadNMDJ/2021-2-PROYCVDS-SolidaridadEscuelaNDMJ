@@ -54,7 +54,7 @@ public class LoginBean extends BaseBean {
         if(logger.isAdmin()){
             HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
             session.setAttribute("username", username);
-            facesContext.getExternalContext().redirect("../admin/administrador.xhtml");
+            facesContext.getExternalContext().redirect("/faces/administrador.xhtml");
         }
         /**if(logger.isProponente()){
             HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
