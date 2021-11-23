@@ -15,7 +15,7 @@
         #{oferta.estado},#{oferta.fechamodificacion})
     </insert>
 
-    <select id="consultarOferta" parameterType="map" resultMap="OfertaResult">
+    <select id="consultarOferta" parameterType="map" resultMap="OfertaResults">
         select * from ofertas where nombre=#{nombre};
     </select>
 
