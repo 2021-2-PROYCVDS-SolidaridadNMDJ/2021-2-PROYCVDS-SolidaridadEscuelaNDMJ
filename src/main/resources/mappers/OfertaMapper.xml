@@ -10,9 +10,9 @@
     </select>
 
     <insert parameterType="map" id="insertarOferta">
-        insert into ofertas(idoferta,idcategoria,nombre,descripcion,fechacreacion,estado,fechamodificacion,nickname) values
+        insert into ofertas(idoferta,idcategoria,nombre,descripcion,fechacreacion,estado,fechamodificacion) values
         (#{oferta.idOferta},#{oferta.idCategoria},#{oferta.nombre},#{oferta.descripcion},#{oferta.fechacreacion},
-        #{oferta.estado},#{oferta.fechamodificacion},#{oferta.nickname})
+        #{oferta.estado},#{oferta.fechamodificacion})
     </insert>
 
     <select id="consultarOferta" parameterType="map" resultMap="OfertaResult">
@@ -27,7 +27,7 @@
             <result property="fechacreacion" column="fechacreacion" />
             <result property="estado " column="estado " />
             <result property="fechamodificacion" column="fechamodificacion" />
-            <result property="nickname" column="nickname" />
+            
     </resultMap>
 
 </mapper>
