@@ -18,7 +18,7 @@ public class MyBatisDAOOferta implements OfertaDAO{
         try {
             ofertaMapper.insertarOferta(oferta);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new SolidaridadException("Error al insertar ", e);
         }
         
     }
@@ -37,7 +37,7 @@ public class MyBatisDAOOferta implements OfertaDAO{
         try{
             return ofertaMapper.consultarOferta(nombre);
         }catch (Exception e){
-            e.printStackTrace();
+            
             throw new SolidaridadException("La oferta consultada no existe");
         }
     }
