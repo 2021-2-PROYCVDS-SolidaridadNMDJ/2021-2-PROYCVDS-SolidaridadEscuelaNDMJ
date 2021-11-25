@@ -31,7 +31,7 @@ public class AdministradorBean extends BaseBean {
         facesContext.getExternalContext().redirect("sign_up.xhtml");
     }
 
-    public void registroUsuario(String correo, String nombre, String apellido, String password, String rol) throws SolidaridadException{
+    public void registrarUsuario(String correo, String nombre, String apellido, String password, String rol) throws SolidaridadException{
         try {
             Usuario usuario = new Usuario(correo, password, nombre, apellido, rol);
             serviciosUsuario.registrarUsuario(usuario);

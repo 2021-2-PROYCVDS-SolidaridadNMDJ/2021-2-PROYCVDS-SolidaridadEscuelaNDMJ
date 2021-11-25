@@ -1,6 +1,7 @@
 package edu.eci.cvds.samples.persistence;
 import edu.eci.cvds.samples.entities.Usuario;
 import edu.eci.cvds.samples.services.SolidaridadException;
+
 import java.util.List;
 
 public interface DAOUsuario{
