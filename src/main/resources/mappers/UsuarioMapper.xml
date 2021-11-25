@@ -14,7 +14,7 @@
     </select>
     
     <insert id="registrarUsuario" parameterType='map'>
-        insert into usuario(idcorreo,contraseña,nombre,apellido,rol) values (#{Usuario.idcorreo},#{Usuario.contraseña},#{Usuario.nombre},#{Usuario.apellido},#{Usuario.rol});
+        insert into tblogin(idcorreo,contraseña,nombre,apellido,rol) values (#{Usuario.idcorreo},#{Usuario.contraseña},#{Usuario.nombre},#{Usuario.apellido},#{Usuario.rol});
     </insert>
 
     <resultMap id="UsuarioResult" type="Usuario">
