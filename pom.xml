@@ -20,6 +20,7 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.1</version>
+      <scope>test</scope>
     </dependency>
 
     <dependency>
@@ -66,13 +67,13 @@
       <artifactId>guice</artifactId>
       <version>5.0.1</version>
     </dependency>
-    <!--
+    
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
       <version>1.4.191</version>
     </dependency>
-    -->
+    
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-api</artifactId>
@@ -178,7 +179,7 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>sql-maven-plugin</artifactId>
         <version>1.5</version>
-        <!-- <dependencies>
+        <dependencies>
          <dependency>
            <groupId>com.h2database</groupId>
            <artifactId>h2</artifactId>
@@ -187,10 +188,11 @@
        </dependencies>
        <configuration>
          <driver>org.h2.Driver</driver>
-         <url>jdbc:h2:file:./target/db/testdb;MODE=MYSQL</url>
-         <username>sa</username>
+         <url>jdbc:h2:file:./target/db/testdb;MODE=PostgreSQL</url>
+         <username>anonnymous</username>
          <password></password>
          <autocommit>false</autocommit>
+         <skip>${maven.test.skip}</skip>
        </configuration>
       <executions>
          <execution>
@@ -205,7 +207,7 @@
              </srcFiles>
            </configuration>
          </execution>
-       </executions> -->
+       </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

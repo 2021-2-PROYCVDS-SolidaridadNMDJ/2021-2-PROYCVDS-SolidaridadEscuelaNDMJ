@@ -61,13 +61,13 @@ public class ServiciosSolidaridadFactory {
         return optInjector.get().getInstance(ServicioUsuario.class);
     }
 
-    /**public ServicioSolidaridadECI getServicioSolidaridadECITesting() {
+    public ServicioUsuario testServicioUsuario() {
         if (!optInjector.isPresent()) {
             optInjector = Optional.of(myBatisInjector("test", "mybatis-config-h2.xml"));
         }
 
-        return optInjector.get().getInstance(ServicioSolidaridadECI.class);
-    }*/
+        return optInjector.get().getInstance(ServicioUsuario.class);
+    }
 
     public static ServiciosSolidaridadFactory getInstance() {
         return instance;
