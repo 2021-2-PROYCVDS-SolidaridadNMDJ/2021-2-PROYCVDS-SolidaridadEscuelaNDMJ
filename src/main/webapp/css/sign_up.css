@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    background-color: #00ccff;
+}
+
+.panel{
+    margin-left: 550px;
+    margin-right: 550px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.Button{
+    color:black;
+    background-color: blueviolet;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 40px;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}

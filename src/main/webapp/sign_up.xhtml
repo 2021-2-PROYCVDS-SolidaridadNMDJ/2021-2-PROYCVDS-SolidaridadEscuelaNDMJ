@@ -9,58 +9,42 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <head>
+    <link rel="stylesheet" type="text/css" href="css/sign_up.css" />
     <title>
         Sign up
     </title>
 </head>
 <h:body>
-    <div class="limiter">
-        <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-            <div class="wrap-login100">
-                <form class="login100-form validate-form" action="">
-            <span class="login100-form-logo">
-                <img src="images/icons/logo.png" width="80" height="70" alt="" /> </span>
+            <div class="panel">
+                <h:form>
                     <br></br>
                     <center>
                         <h1>Sign Up</h1>
                     </center>
                     <br></br>
-                    <div class="wrap-input100 validate-input">
+                    <h:panelGrid id="grid" cellpadding="2" columns="2">
                         <h:outputLabel style="color:black;" for="Firstname" value="First name"/>
                         <h:inputText class="input100" id="Firstname" required="true" type="String" binding="#{nombre}" />
-                    </div>
-                    <div class="wrap-input100 validate-input">
+                   
+                    
                         <h:outputLabel style="color:black;" for="Lastname" value="Last name"/>
                         <h:inputText class="input100" id="Lastname"  required="true" type="String" binding="#{apellido}" />
-                    </div>
-                    <div class="wrap-input100 validate-input">
+                    
+                    
                         <h:outputLabel style="color:black;" for="Mail" value="Mail"/>
                         <h:inputText class="input100" id="Mail"  required="true" type="String" binding="#{idCorreo}" />
-                    </div>
-                    <div class="wrap-input100 validate-input">
-                        <h:outputLabel style="color:black;" for="area" value="Area"/>
-                        <h:inputText class="input100" id="area"  required="true" type="String" binding="#{rol}" />
-                    </div>
-                    <div class="wrap-input100 validate-input">
+                   
+                        <h:outputLabel style="color:black;" for="rol" value="Rol"/>
+                        <h:inputText class="input100" id="Rol"  required="true" type="String" binding="#{rol}" />
+                 
                         <h:outputLabel style="color:black;" for="Password" value="Pasword"/>
                         <h:inputSecret class="input100" id="Password"  required="true" type="String" binding="#{contraseña}" />
-                    </div>
-                    <h:form style="color:black;">
-                        <br/>
-                        <br/>
-                        <div class="container-login100-form-btn">
-                            <p:commandButton class="login100-form-btn" value="Create" actionListener="#{adminBean.registrarUsuario(idCorreo.value,nombre.value,apellido.value,password.value,rol.value)}" ajax="true"> </p:commandButton>
-                        </div>
-                    </h:form>
-                    <br/>
-                    <div class="container-login100-form-btn">
-                        <h:form>
-                            <p:commandButton class="login100-form-btn" value="Cancel" actionListener="#{loginbean.home2}" ajax="true"> </p:commandButton>
-                        </h:form>
-                    </div>
-                </form>
+                    </h:panelGrid>
+                  
+                        
+                    <p:commandButton class="Button" value="Create" actionListener="#{adminBean.registrarUsuario(idCorreo.value,nombre.value,apellido.value,password.value,rol.value)}" ajax="true"> </p:commandButton>
+                   
+                </h:form>
             </div>
-        </div>
-    </div>
 </h:body>
 </html>
