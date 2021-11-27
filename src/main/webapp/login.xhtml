@@ -28,10 +28,8 @@
                     
                     <h:outputLabel style="color:black;" for="Password" value="Contraseña" />
                     <h:inputText class="input100" id="Password" required="true" type="String" value="#{loginBean.password}" />
-                   
-                    <p:commandButton class="Button" value="Login" actionListener="#{loginBean.login}" ajax="true">
-                    </p:commandButton>
                 </h:panelGrid>
+                <p:commandButton class="Button" value="Login" actionListener="#{loginBean.login}" ajax="true"></p:commandButton>
             </h:form>
         </div>
 </h:body>
