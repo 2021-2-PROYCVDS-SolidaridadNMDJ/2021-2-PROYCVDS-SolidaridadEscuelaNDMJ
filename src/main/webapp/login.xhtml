@@ -15,27 +15,29 @@
 <h:body>
     <div class="limiter">
         <div class="panel">
-            <form class="login100-form validate-form" action="">
-                <br></br>
-                <center>
-                    <h1>Login</h1>
-                </center>
-                <br></br>
-                <div class="wrap-input100 validate-input">
-                    <h:outputLabel style="color:black;" for="User" value="Usuario" />
-                    <h:inputText class="input100" id="User" required="true" type="String"
-                        value="#{loginBean.username}" />
+            <div class="row">
+                <div class="col-4">
+                    <form class="login100-form validate-form" action="">
+                        <br></br>
+                        <center>
+                            <h1>Login</h1>
+                        </center>
+                        <br></br>
+                        <div class="wrap-input100 validate-input">
+                            <h:outputLabel style="color:black;" for="User" value="Usuario" />
+                            <h:inputText class="input100" id="User" required="true" type="String" value="#{loginBean.username}" />
+                        </div>
+                        <div class="wrap-input100 validate-input">
+                            <h:outputLabel style="color:black;" for="Password" value="Contraseña" />
+                            <h:inputText class="input100" id="Password" required="true" type="String" value="#{loginBean.password}" />
+                        </div>
+                        <h:form>
+                            <p:commandButton class="Button" value="Login" actionListener="#{loginBean.login}" ajax="true">
+                            </p:commandButton>
+                        </h:form>
+                    </form>
                 </div>
-                <div class="wrap-input100 validate-input">
-                    <h:outputLabel style="color:black;" for="Password" value="Contraseña" />
-                    <h:inputText class="input100" id="Password" required="true" type="String"
-                        value="#{loginBean.password}" />
-                </div>
-                <h:form>
-                    <p:commandButton class="Button" value="Login" actionListener="#{loginBean.login}" ajax="true">
-                    </p:commandButton>
-                </h:form>
-            </form>
+            </div>
         </div>
     </div>
 </h:body>
