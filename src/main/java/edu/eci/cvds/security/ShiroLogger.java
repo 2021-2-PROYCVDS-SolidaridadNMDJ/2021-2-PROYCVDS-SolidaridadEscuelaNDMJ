@@ -22,9 +22,9 @@ import javax.faces.context.FacesContext;
                 subject.getSession().setAttribute("Correo", correo);
                 subject.login(token);
             }catch (UnknownAccountException uae){
-                throw new SolidaridadException("El usuario no esta registrado",uae);
+                throw new SolidaridadException("El usuario no esta registrado");
             }catch (IncorrectCredentialsException ice){
-                throw new SolidaridadException("Credenciales incorrctas",ice);
+                throw new SolidaridadException("Credenciales incorrectas");
             }
         }   
 
