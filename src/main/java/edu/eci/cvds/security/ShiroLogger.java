@@ -7,7 +7,7 @@ import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import edu.eci.cvds.samples.services.SolidaridadException;
-import javax.swing.JOptionPane;
+
 import javax.faces.context.FacesContext;
 
 
@@ -24,8 +24,7 @@ import javax.faces.context.FacesContext;
             }catch (UnknownAccountException uae){
                 throw new SolidaridadException("El usuario no esta registrado",uae);
             }catch (IncorrectCredentialsException ice){
-                JOptionPane.showMessageDialog(null,"Credenciales incorrctas");
-                //throw new SolidaridadException("Credenciales incorrctas",ice);
+                throw new SolidaridadException("Credenciales incorrctas",ice);
             }
         }   
 
