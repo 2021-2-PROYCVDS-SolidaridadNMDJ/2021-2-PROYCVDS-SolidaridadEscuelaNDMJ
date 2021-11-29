@@ -56,23 +56,26 @@ public class LoginBean extends BaseBean {
             session.setAttribute("username", username);
             facesContext.getExternalContext().redirect("/faces/administrador.xhtml");
         }
-        
-        /**if(logger.isProponente()){
+        if(logger.isEstudiante()){
             HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
             session.setAttribute("username", username);
-            facesContext.getExternalContext().redirect("../proponente/proponente.xhtml");
+            facesContext.getExternalContext().redirect("/faces/estudiante.xhtml");
         }
-        if(logger.isPMO()){
+        if(logger.isProfesor()){
             HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
             session.setAttribute("username", username);
-            facesContext.getExternalContext().redirect("../PMO/pmo.xhtml");
-        }**/
-    }
-
-    public void redirectBusquedaIniciativas() throws IOException{
-        FacesContext facesContext = FacesContext.getCurrentInstance();
-        HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
-        facesContext.getExternalContext().redirect("../publico/busquedaIniciativaPalabras.xhtml");
+            facesContext.getExternalContext().redirect("/faces/profesor.xhtml");
+        }
+        if(logger.isEgresado()){
+            HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+            session.setAttribute("username", username);
+            facesContext.getExternalContext().redirect("/faces/egresado.xhtml");
+        }
+        if(logger.isAdministrativo()){
+            HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+            session.setAttribute("username", username);
+            facesContext.getExternalContext().redirect("/faces/administrativo.xhtml");
+        }
     }
 
     /**

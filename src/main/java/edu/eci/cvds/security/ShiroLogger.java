@@ -34,13 +34,23 @@ import javax.faces.context.FacesContext;
         }
 
         @Override
-        public boolean isProponente() {
-            return SecurityUtils.getSubject().hasRole("Proponente");
+        public boolean isEstudiante() {
+            return SecurityUtils.getSubject().hasRole("Estudiante");
         }
 
         @Override
-        public boolean isPMO() {
-            return SecurityUtils.getSubject().hasRole("PMO");
+        public boolean isProfesor() {
+            return SecurityUtils.getSubject().hasRole("Profesor");
+        }
+
+        @Override
+        public boolean isEgresado() {
+            return SecurityUtils.getSubject().hasRole("Egresado");
+        }
+
+        @Override
+        public boolean isAdministrativo() {
+            return SecurityUtils.getSubject().hasRole("Administrativo");
         }
 
         @Override

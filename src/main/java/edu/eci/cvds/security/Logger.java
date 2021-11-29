@@ -8,9 +8,13 @@ public interface Logger {
 
     public boolean isAdmin();
 
-    public boolean isProponente();
+    public boolean isEstudiante();
 
-    public boolean isPMO();
+    public boolean isProfesor();
+
+    public boolean isEgresado();
+
+    public boolean isAdministrativo();
 
     public void logout();
 
