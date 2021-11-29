@@ -37,7 +37,8 @@ public class AdministradorBean extends BaseBean {
             serviciosUsuario.registrarUsuario(usuario);
             this.message = "El usuario se registro correctamente";
         } catch (Exception e){
-            this.message = "Hubo un error registrando al usuario, intentelo nuevamente";
+            e.printStackTrace();
+            throw new SolidaridadException("Hubo un error registrando al usuario, intentelo nuevamente");
         }
     }
 }

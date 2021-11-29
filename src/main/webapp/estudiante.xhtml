@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:color="http://java.sun.com/jsf/html" lang="en"
+    xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+
+
+<head>
+    <title>
+        Registrar Necesidad
+    </title>
+</head>
+<h:body>
+    <p:commandButton id="boton_salir" value="Salir" actionListener="#{loginBean.logOut()}" />
+    <div>
+        <h:form id="registroNecesidad" prependId="false">
+            <br></br>
+            <center>
+                <h1>Registro de Necesidad</h1>
+            </center>
+            <br></br>
+
+            <h:panelGrid id="grid" cellpadding="2" columns="2">
+                <h:outputLabel style="color: black;" for="Categoria" value="Categoria"/>
+                <h:inputText id="Categoria" required="true" type="string" binding="#{categoria}"/>
+
+                <h:outputLabel style="color: black;" for="Nombre" value="Nombre" />
+                <h:inputText id="Nombre" required="true" type="string" binding="#{nombre}" />
+
+                <h:outputLabel style="color: black;" for="Descripcion" value="Descripcion" />
+                <h:inputText id="Descripcion" required="true" type="string" binding="#{descripcion}" />
+
+                <h:outputLabel style="color: black;" for="Categoria" value="Categoria" />
+                <h:inputText id="Categoria" required="true" type="string" binding="#{categoria}" />
+
+                <h:outputLabel style="color: black;" for="Urgencia" value="Urgencia" />
+                <h:inputText id="Urgencia" required="true" type="string" binding="#{urgencia}" />
+
+                <h:outputLabel style="color: black;" for="FechaCreacion" value="Fecha Creacion" />
+                <h:inputText id="FechaCreacion" required="true" type="string" binding="#{fechaCreacion}" />
+
+                <h:outputLabel style="color: black;" for="Estado" value="Estado" />
+                <h:inputText id="Estado" required="true" type="string" binding="#{estado}" />
+
+                <h:outputLabel style="color: black;" for="FechaModificacion" value="Fecha Modificacion" />
+                <h:inputText id="FechaModificacion" required="true" type="string" binding="#{fechaModificacion}" />
+            </h:panelGrid>
+
+            <p:commandButton class="Button" value="Registrar Necesidad"
+                actionListener="#{necesidadBean.registrarNecesidad(categoria.value,nombre.value,descripcion.value,urgencia.value,fechaCreacion.value,estado.value,fechaModificacion.value)}"
+                ajax="true"> 
+            </p:commandButton>
+                
+        </h:form>
+    </div>
+  
+</h:body>
+
+</html>
