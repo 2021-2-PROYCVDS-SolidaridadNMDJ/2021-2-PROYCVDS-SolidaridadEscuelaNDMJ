@@ -13,7 +13,9 @@
     </title>
 </head>
 <h:body>
-    <p:commandButton id="boton_salir" value="Salir" actionListener="#{loginBean.logOut()}" ajax="true"/>
+    <h:form>
+        <p:commandButton id="boton_salir" value="Salir" actionListener="#{loginBean.logOut()}" ajax="true" />
+    </h:form>
     <div>
         <h:form>
             <br></br>
