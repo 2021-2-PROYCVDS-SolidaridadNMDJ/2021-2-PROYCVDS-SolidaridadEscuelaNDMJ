@@ -12,15 +12,13 @@
     </title>
 </head>
 <h:body>
-    <p:commandButton id="boton_salir" value="Salir" actionListener="#{loginBean.logOut()}" type="submit"/>
+    <p:commandButton id="boton_salir" value="Salir" action="#{loginBean.logOut()}" type="submit"/>
     <h1>
         Hola
     </h1>
     <h:form id="busquedaUsuario" prependId="false">
-        <!--<p:commandButton id="registro" value="Registrar Usuario" actionListener="#{adminBean.redirectRegistroDeUsuario()}"
-            style="background-color: blue; border-radius: 15px; font-family: Quicksand" />-->
-        <p:commandButton value="Regresar" action="administrador.xhtml?faces-redirect = true"
-            style="margin-left: -40%;background-color: rgb(20, 216, 118); border-radius: 15px;font-family: Quicksand" process="@this" />
+        <p:commandButton id="registro" value="Registrar Usuario" actionListener="#{adminBean.redirectRegistroDeUsuario()}"
+            style="background-color: blue; border-radius: 15px; font-family: Quicksand" />
     </h:form>
 </h:body>
 </html>
