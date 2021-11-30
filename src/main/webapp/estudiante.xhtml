@@ -15,7 +15,7 @@
 <h:body>
     <p:commandButton id="boton_salir" value="Salir" actionListener="#{loginBean.logOut()}" />
     <div>
-        <h:form id="registroNecesidad" prependId="false">
+        <h:form>
             <br></br>
             <center>
                 <h1>Registro de Necesidad</h1>
@@ -35,18 +35,10 @@
                 <h:outputLabel style="color: black;" for="Urgencia" value="Urgencia" />
                 <h:inputText id="Urgencia" required="true" type="string" binding="#{urgencia}" />
 
-                <h:outputLabel style="color: black;" for="FechaCreacion" value="Fecha Creacion" />
-                <h:inputText id="FechaCreacion" required="true" type="date" binding="#{fechaCreacion}" />
-
-                <h:outputLabel style="color: black;" for="Estado" value="Estado" />
-                <h:inputText id="Estado" required="true" type="string" binding="#{estado}" />
-
-                <h:outputLabel style="color: black;" for="FechaModificacion" value="Fecha Modificacion" />
-                <h:inputText id="FechaModificacion" required="true" type="date" binding="#{fechaModificacion}" />
             </h:panelGrid>
 
             <p:commandButton class="Button" value="Registrar Necesidad"
-                actionListener="#{necesidadBean.registrarNecesidad(categoria.value,nombre.value,descripcion.value,urgencia.value,fechaCreacion.value,estado.value,fechaModificacion.value)}"
+                actionListener="#{necesidadBean.registrarNecesidad(categoria.value,nombre.value,descripcion.value,urgencia.value)}"
                 ajax="true"> 
             </p:commandButton>
                 

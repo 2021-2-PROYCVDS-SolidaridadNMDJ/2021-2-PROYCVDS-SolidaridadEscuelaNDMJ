@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 import java.sql.Date;
+import java.util.Date;
 
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "necesidadBean")
@@ -22,9 +23,9 @@ public class NecesidadBean extends BaseBean {
      private NecesidadService necesidadService;
      private String message;
 
-     public void registrarNecesidad(String categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion)throws SolidaridadException{
+     public void registrarNecesidad(String categoria,String nombre,String descripcion,String urgencia,String estado)throws SolidaridadException{
          try {
-            Necesidad necesidad = new Necesidad(categoria, nombre, descripcion, urgencia, fechaCreacion, estado, fechaModificacion);
+            Necesidad necesidad = new Necesidad(categoria, nombre, descripcion, urgencia, new Date((new java.util.Date()).getTime()),"En Proceso", new Date((new java.util.Date()).getTime()));
             necesidadService.registrarNecesidad(necesidad);
             this.message = "La necesidad se registro correctamente";
         } catch (Exception e){
