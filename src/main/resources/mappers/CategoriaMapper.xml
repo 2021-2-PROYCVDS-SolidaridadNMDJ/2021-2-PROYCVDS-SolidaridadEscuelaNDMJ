@@ -15,7 +15,7 @@
         DELETE from categoria where nombre=#{nombre} and idCategoria=#{idCategoria};
     </delete>
 
-    <select id="consultarCategoria" parameterType='map' resultMap="Categorias">
+    <select id="consultarCategoria" parameterType='map' resultMap="CategoriasResult">
         SELECT * from categoria where nombre=#{nombre};
     </select>
 
