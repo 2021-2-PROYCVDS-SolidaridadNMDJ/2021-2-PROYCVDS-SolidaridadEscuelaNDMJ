@@ -23,11 +23,11 @@
                 <h:panelGrid id="grid" cellpadding="2" columns="2">
                     
                     <h:outputLabel style="color:black;" for="User" value="Usuario" />
-                    <h:inputText class="input100" id="User" required="true" type="String" value="#{loginBean.username}" />
+                    <h:inputText class="input100" id="User" required="true" type="String" binding="#{loginBean.username}" />
                    
                     
                     <h:outputLabel style="color:black;" for="Password" value="Contraseña" />
-                    <h:inputText class="input100" id="Password" required="true" type="String" value="#{loginBean.password}" />
+                    <h:inputText class="input100" id="Password" required="true" type="String" binding="#{loginBean.password}" />
                 </h:panelGrid>
                 <p:commandButton class="Button" value="Login" actionListener="#{loginBean.login}" ajax="true"></p:commandButton>
             </h:form>
