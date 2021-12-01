@@ -24,11 +24,11 @@
     <h:form id="busquedaUsuario" prependId="false">
         <p:dataTable var="usuarios" value="#{adminBean.consultarTodosLosUsuarios()}" aginator="true" paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}" rows="10" selectionMode="single" rowkey="#{usuarios.getIdCorreo()}">
             <p:column headerText="Email del Usuario">
-                <p:outputText value="#{usuarios.getIdCorreo()}"/>
+                <h:outputText value="#{usuarios.getIdCorreo()}"/>
             </p:column>
     
             <p:column headerText="Nombre">
-                <p:outputText value="#{usuarios.getNombre()}" />
+                <h:outputText value="#{usuarios.getNombre()}" />
             </p:column>
     
         </p:dataTable>
