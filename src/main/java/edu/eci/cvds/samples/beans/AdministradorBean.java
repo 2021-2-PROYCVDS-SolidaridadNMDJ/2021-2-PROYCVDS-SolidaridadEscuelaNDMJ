@@ -53,10 +53,8 @@ public class AdministradorBean extends BaseBean {
 
     public List<Usuario> consultarTodosLosUsuarios() throws SolidaridadException{
         try{
-            if(usuariosRegistrados == null){
-                usuariosRegistrados = serviciosUsuario.consultarUsuarios();
-            }
-            return usuariosRegistrados;
+            return serviciosUsuario.consultarUsuarios();
+            
         }catch (Exception e){
             e.printStackTrace();
             throw new SolidaridadException("Hubo un error al consultar los usuarios");
