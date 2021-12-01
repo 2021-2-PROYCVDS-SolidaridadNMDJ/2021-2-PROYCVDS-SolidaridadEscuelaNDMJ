@@ -26,7 +26,7 @@ public class Categoria {
     public Categoria(String nombre, String descripcion){
         byte[] array = new byte[10]; // length is bounded by 10
         new Random().nextBytes(array);
-        String generatedString = new String(array, Charset.forName("UTF-8"));
+        String generatedString = UUID.randomUUID().toString();
         
         this.idCategoria = generatedString;
         this.nombre = nombre;
