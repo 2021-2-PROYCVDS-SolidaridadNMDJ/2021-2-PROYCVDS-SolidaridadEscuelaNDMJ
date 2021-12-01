@@ -24,11 +24,9 @@ public class Categoria {
     private Date fechaDeModificacion;
     
     public Categoria(String nombre, String descripcion){
-        byte[] array = new byte[10]; // length is bounded by 10
-        new Random().nextBytes(array);
-        String generatedString = UUID.randomUUID().toString();
+    
         
-        this.idCategoria = generatedString;
+        this.idCategoria =UUID.randomUUID().toString();
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.fechaDeCreacion = Date.valueOf(LocalDate.now());
