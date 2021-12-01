@@ -23,7 +23,7 @@
     </insert>
 
     <resultMap id="UsuarioResult" type="Usuario">
-        <id property="idcorreo" column="idcorreo"/>
+        <id property="idCorreo" column="idcorreo"/>
         <result property="contraseña" column="contraseña"/>
         <result property="nombre" column="nombre"/>
         <result property="apellido" column="apellido"/>
