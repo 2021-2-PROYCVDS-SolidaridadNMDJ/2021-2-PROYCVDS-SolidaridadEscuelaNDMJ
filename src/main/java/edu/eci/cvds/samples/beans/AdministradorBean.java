@@ -63,6 +63,14 @@ public class AdministradorBean extends BaseBean {
         }
     }
 
+    public List<Usuario> getUsuarios(){
+        return usuariosRegistrados;
+    }
+    
+    public void setUsuarios(List<Usuario> usuariosRegistrados){
+        this.usuariosRegistrados = usuariosRegistrados;
+    }
+
     public Usuario getUsuario(){
         return usuario;
     }
