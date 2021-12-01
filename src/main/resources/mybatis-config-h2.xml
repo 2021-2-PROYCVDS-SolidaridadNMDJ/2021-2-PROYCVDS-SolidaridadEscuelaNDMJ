@@ -28,6 +28,7 @@
         <mapper resource="mappers/CategoriaMapper.xml"></mapper>
         <mapper resource="mappers/NecesidadMapper.xml"></mapper>
         <mapper resource="mappers/OfertaMapper.xml"></mapper>
+        <mapper resource="mappers/RespuestaMapper.xml"></mapper>
     </mappers>
 
 
