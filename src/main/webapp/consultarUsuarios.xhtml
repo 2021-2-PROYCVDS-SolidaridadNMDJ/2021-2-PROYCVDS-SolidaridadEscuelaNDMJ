@@ -14,7 +14,7 @@
 
 <h:body style="background-color:#00ccff;">
     <h:form id="busquedaUsuario" prependId="false">
-        <p:dataTable id="tbl" var="usuarios" value="#{adminBean.consultarTodosLosUsuarios()}" paginator="true"
+        <p:dataTable id="idCorreo" var="usuarios" value="#{adminBean.consultarTodosLosUsuarios()}" paginator="true"
             paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
             rows="10" selectionMode="single" rowkey="#{usuarios.getIdCorreo()}">
             <p:column headerText="Email del Usuario">

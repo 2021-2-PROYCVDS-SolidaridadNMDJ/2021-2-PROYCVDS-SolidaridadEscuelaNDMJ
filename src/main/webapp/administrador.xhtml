@@ -19,9 +19,12 @@
             <h1>Registrar Categoria</h1>
         </center>
         <br></br>
+        <p:commandButton id="registroCategoria" value="Registrar Categoria"
+            actionListener="#{adminBean.redirectRegistroCategorias()}"
+            style="background-color: blue; border-radius: 15px; font-family: Quicksand" />
     </h:form>
     
-    <h:form id="busquedaUsuario" prependId="false">
+    <!--<h:form id="busquedaUsuario" prependId="false">
         <p:dataTable id="tbl" var="usuarios" value="#{adminBean.consultarTodosLosUsuarios()}" paginator="true" paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}" rows="10" selectionMode="single" rowkey="#{usuarios.getIdCorreo()}">
             <p:column headerText="Email del Usuario">
                 <h:outputText value="#{usuarios.getIdCorreo()}"/>
@@ -37,6 +40,6 @@
             style="background-color: blue; border-radius: 15px; font-family: Quicksand" />
         <p:commandButton id="registroCategoria" value="Registrar Categoria" actionListener="#{adminBean.redirectRegistroCategorias()}"
             style="background-color: blue; border-radius: 15px; font-family: Quicksand" />
-    </h:form>
+    </h:form>-->
 </h:body>
 </html>
