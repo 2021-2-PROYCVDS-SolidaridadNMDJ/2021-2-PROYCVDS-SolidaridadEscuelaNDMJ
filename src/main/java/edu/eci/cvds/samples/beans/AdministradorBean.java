@@ -19,9 +19,7 @@ import java.util.List;
 public class AdministradorBean extends BaseBean {
     @Inject
     private ServicioUsuario serviciosUsuario;
-    private String rol;
     private Usuario usuario;
-    private String area;
     private String message;
     private List<Usuario> usuariosRegistrados;
 
@@ -40,5 +38,30 @@ public class AdministradorBean extends BaseBean {
             e.printStackTrace();
             throw new SolidaridadException("Hubo un error registrando al usuario, intentelo nuevamente");
         }
+    }
+
+    public Usuario buscarUsuario(String email) throws SolidaridadException{
+        this.usuario = serviciosUsuario.consultarUsuario(email);
+        return usuario;
+    }
+
+    public List<Usuario> consultarTodosLosUsuarios() throws SolidaridadException{
+        try{
+            if(usuariosRegistrados == null){
+                usuariosRegistrados = serviciosUsuario.consultarUsuarios();
+            }
+            return usuariosRegistrados;
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new SolidaridadException("Hubo un error al consultar los usuarios");
+        }
+    }
+
+    public Usuario getUsuario(){
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario){
+        this.usuario = usuario;
     }
 }
