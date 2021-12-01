@@ -62,7 +62,7 @@ public class AdministradorBean extends BaseBean {
     }
 
 
-    public List<Usuario> getUsuarios(){
+    /**public List<Usuario> getUsuarios(){
         return usuariosRegistrados;
     }
     
@@ -76,6 +76,6 @@ public class AdministradorBean extends BaseBean {
 
     public void setUsuario(Usuario usuario){
         this.usuario = usuario;
-    }
+    }**/
     
 }
