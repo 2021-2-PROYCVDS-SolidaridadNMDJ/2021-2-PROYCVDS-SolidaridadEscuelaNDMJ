@@ -16,7 +16,7 @@
     <h:form id="busquedaUsuario" prependId="false">
         <p:dataTable id="idCorreo" var="usuarios" value="#{adminBean.consultarTodosLosUsuarios()}" paginator="true"
             paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
-            rows="10" selectionMode="single" rowkey="#{usuarios.getIdCorreo()}">
+            rows="10" selectionMode="single" rowKey="#{usuarios.getIdCorreo()}">
             <p:column headerText="Email del Usuario">
                 <h:outputText value="#{usuarios.getIdCorreo()}" />
             </p:column>
