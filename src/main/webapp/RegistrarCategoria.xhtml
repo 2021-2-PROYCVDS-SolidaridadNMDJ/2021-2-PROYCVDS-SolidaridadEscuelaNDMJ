@@ -25,7 +25,7 @@
             <p:outputLabel for="descripcion" value="Descripcion Categoria: "/>
             <p:inputText id="descripcion" type="String" binding="#{descripcion}"/>
         </h:panelGrid>
-        <p:commandButton actionListener="#{CategoriaBean.registrarCategoria(nombre,descripcion)}" value="Registrar Categoria"/>
+        <p:commandButton actionListener="#{CategoriaBean.registrarCategoria(nombre.value,descripcion.value)}" value="Registrar Categoria"/>
         
     </h:form>
     
