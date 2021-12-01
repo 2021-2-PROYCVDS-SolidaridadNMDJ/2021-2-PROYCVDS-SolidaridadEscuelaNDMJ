@@ -13,7 +13,7 @@
 </h:head>
 
 <h:body style="background-color:#00ccff;">
-    <h:form id="busquedaUsuario" prependId="false">
+    <h:form>
         <p:dataTable id="idCorreo" var="usuarios" value="#{adminBean.consultarTodosLosUsuarios()}" paginator="true"
             paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
             rows="10" selectionMode="single" rowKey="#{usuarios.getIdCorreo()}">
