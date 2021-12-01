@@ -46,5 +46,29 @@ public class AdministradorBean extends BaseBean {
         }
     }
 
+    public Usuario buscarUsuario(String email) throws SolidaridadException{
+        this.usuario = serviciosUsuario.consultarUsuario(email);
+        return usuario;
+    }
+
+    public List<Usuario> consultarTodosLosUsuarios() throws SolidaridadException{
+        try{
+            if(usuariosRegistrados == null){
+                usuariosRegistrados = serviciosUsuario.consultarUsuarios();
+            }
+            return usuariosRegistrados;
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new SolidaridadException("Hubo un error al consultar los usuarios");
+        }
+    }
+
+    public Usuario getUsuario(){
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario){
+        this.usuario = usuario;
+    }
     
 }

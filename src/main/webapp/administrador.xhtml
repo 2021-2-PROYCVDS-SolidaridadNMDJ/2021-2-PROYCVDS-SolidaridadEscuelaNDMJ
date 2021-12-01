@@ -21,7 +21,18 @@
         <br></br>
     </h:form>
     
-    <h:form>
+    <h:form id="busquedaUsuario" prependId="false">
+        <p:dataTable var="usuarios" value="#{adminBean.consultarTodosLosUsuarios()}" aginator="true" paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}" rows="10" selectionMode="single" rowkey="#{usuarios.getIdCorreo()}">
+            <p:column headerText="Email del Usuario">
+                <p:outputLabel value="#{usuarios.getIdCorreo()}"/>
+            </p:column>
+    
+            <p:column headerText="Nombre">
+                <p:outputLabel value="#{usuarios.getNombre()}" />
+            </p:column>
+    
+        </p:dataTable>-->
+        
         <p:commandButton id="registro" value="Registrar Usuario" actionListener="#{adminBean.redirectRegistroDeUsuario()}"
             style="background-color: blue; border-radius: 15px; font-family: Quicksand" />
         <p:commandButton id="registroCategoria" value="Registrar Categoria" actionListener="#{adminBean.redirectRegistroCategorias()}"
