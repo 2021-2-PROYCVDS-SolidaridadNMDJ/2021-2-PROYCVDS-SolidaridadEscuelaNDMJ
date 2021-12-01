@@ -22,7 +22,7 @@
     </h:form>
     
     <h:form id="busquedaUsuario" prependId="false">
-        <p:dataTable id="tbl" var="usuarios" value="#{adminBean.consultarTodosLosUsuarios()}" paginator="true" paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}" rows="10" selectionMode="single" rowkey="#{usuarios.getIdCorreo()}">
+        <p:dataTable id="tbl" var="usuarios" value="#{adminBean.usuariosRegistrados}" paginator="true" paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}" rows="10" selectionMode="single" rowkey="#{usuarios.getIdCorreo()}">
             <p:column headerText="Email del Usuario">
                 <h:outputText value="#{usuarios.getIdCorreo()}"/>
             </p:column>
