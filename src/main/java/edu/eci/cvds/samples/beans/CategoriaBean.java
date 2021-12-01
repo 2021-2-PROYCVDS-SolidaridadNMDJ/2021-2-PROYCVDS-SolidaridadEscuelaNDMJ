@@ -50,5 +50,13 @@ public class CategoriaBean extends BaseBean{
             }
         }
 
+        public List<Categoria> consultarCategorias() throws SolidaridadException{
+            try{
+                return categoriasService.consultarCategorias();
+            }catch (Exception e){
+                throw new SolidaridadException("Error al consultar las categorias ");
+            }
+        }
+
 
 }

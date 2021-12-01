@@ -20,10 +20,10 @@
         <h:panelGrid id="grid" cellpadding="2" columns="2">
 
             <p:outputLabel for="nombre" value="Nombre Categoria: "/>
-            <p:inputText id="nombre" type="String" value="#{CategoriaBean.Categoria.nombre}"/>
+            <p:inputText id="nombre" type="String"  binding="#{nombre}"/>
 
             <p:outputLabel for="descripcion" value="Descripcion Categoria: "/>
-            <p:inputText id="descripcion" type="String" value="#{CategoriaBean.Categoria.descripcion}"/>
+            <p:inputText id="descripcion" type="String" binding="#{descripcion}"/>
         </h:panelGrid>
         <p:commandButton actionListener="#{CategoriaBean.registrarCategoria(nombre,descripcion)}" value="Registrar Categoria"/>
         
