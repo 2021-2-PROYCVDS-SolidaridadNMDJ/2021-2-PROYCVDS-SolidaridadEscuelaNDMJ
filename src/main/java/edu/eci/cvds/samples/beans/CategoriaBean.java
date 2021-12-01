@@ -12,7 +12,7 @@ import javax.annotation.PostConstruct;
 import java.sql.Date;
 import java.util.List;
 
-@ManagedBean(name = "CategoriasBean")
+@ManagedBean(name = "CategoriaBean")
 @ApplicationScoped
 public class CategoriaBean extends BaseBean{
 

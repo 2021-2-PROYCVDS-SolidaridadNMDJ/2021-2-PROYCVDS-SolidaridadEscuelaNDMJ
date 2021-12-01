@@ -16,7 +16,7 @@
 
       <h:body style="background-color:#00ccff;">
           <h:form>
-            <p:dataTable var="categoria" value="#{CategoriasBean.consultarCategorias()}"
+            <p:dataTable var="categoria" value="#{CategoriaBean.consultarCategorias()}"
             aginator="true" paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
                      rows="10" selectionMode="single" id="idCategoria"
                      rowKey="#{categoria.getIdCategoria()}">
