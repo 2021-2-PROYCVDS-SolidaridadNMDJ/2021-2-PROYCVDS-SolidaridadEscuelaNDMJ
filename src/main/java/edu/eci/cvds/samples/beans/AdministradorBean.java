@@ -63,13 +63,6 @@ public class AdministradorBean extends BaseBean {
         }
     }
 
-    public Usuario buscarUsuario() throws SolidaridadException {
-        FacesContext facesContext = FacesContext.getCurrentInstance();
-        HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
-        String correo = (String) session.getAttribute("usuario");
-        this.usuario = serviciosUsuario.consultarUsuario(correo);
-        return usuario;
-    }
 
     public List<Usuario> getUsuarios(){
         return usuariosRegistrados;
