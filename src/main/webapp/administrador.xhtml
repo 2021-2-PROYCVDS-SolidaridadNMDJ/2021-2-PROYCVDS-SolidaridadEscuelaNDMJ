@@ -12,15 +12,15 @@
     </title>
 </head>
 <h:body>
-    <p:commandButton id="boton_salir" value="Salir" actionListener="#{loginBean.logOut()}" />
-    <!--<h:form>
-        
+    
+    <h:form>
+        <p:commandButton id="boton_salir" value="Salir" actionListener="#{loginBean.logOut()}" />
         <br></br>
         <center>
             <h1>Registrar Categoria</h1>
         </center>
         <br></br>
-    </h:form>-->
+    </h:form>
 
     <h:form>
         <p:dataTable id="idCorreo" var="usuarios" value="#{adminBean.consultarTodosLosUsuarios()}" paginator="true" paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}" rows="10" selectionMode="single" rowKey="#{usuarios.getIdCorreo()}">
