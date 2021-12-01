@@ -35,7 +35,7 @@ public class AdministradorBean extends BaseBean {
         facesContext.getExternalContext().redirect("RegistrarCategoria.xhtml");
     }
 
-    /**public void registrarUsuario(String correo, String nombre, String apellido, String password, String rol) throws SolidaridadException{
+    public void registrarUsuario(String correo, String nombre, String apellido, String password, String rol) throws SolidaridadException{
         try {
             Usuario usuario = new Usuario(correo, password, nombre, apellido, rol);
             serviciosUsuario.registrarUsuario(usuario);
@@ -44,14 +44,14 @@ public class AdministradorBean extends BaseBean {
             e.printStackTrace();
             throw new SolidaridadException("Hubo un error registrando al usuario, intentelo nuevamente");
         }
-    }**/
+    }
 
     public Usuario buscarUsuario(String email) throws SolidaridadException{
         this.usuario = serviciosUsuario.consultarUsuario(email);
         return usuario;
     }
 
-    public List<Usuario> consultarTodosLosUsuarios() throws SolidaridadException{
+    /**public List<Usuario> consultarTodosLosUsuarios() throws SolidaridadException{
         try{
             if(usuariosRegistrados == null){
                 usuariosRegistrados = serviciosUsuario.consultarUsuarios();
@@ -61,7 +61,7 @@ public class AdministradorBean extends BaseBean {
             e.printStackTrace();
             throw new SolidaridadException("Hubo un error al consultar los usuarios");
         }
-    }
+    }**/
 
     public Usuario getUsuario(){
         return usuario;
