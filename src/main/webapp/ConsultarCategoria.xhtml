@@ -15,7 +15,32 @@
       </h:head>
 
       <h:body style="background-color:#00ccff;">
-          <h1>Consultar Categoria</h1>
+          <h:form>
+            <p:dataTable var="categoria" value="#{CategoriasBean.consultarCategorias()}"
+            aginator="true" paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
+                     rows="10" selectionMode="single" id="idCategoria"
+                     rowKey="#{categoria.getIdCategoria()}">
+                     <f:facet name="header"> Categorias </f:facet>
+            <p:column headerText="idCategoria">
+                <h:outputText value="#{categoria.getIdCategoria()}"/>
+            </p:column>
+            <p:column headerText="Nombre">
+                <h:outputText value="#{categoria.getNombre()}"/>
+            </p:column>
+            <p:column headerText="Descripcion">
+                <h:outputText value="#{categoria.getDescripcion()}"/>
+            </p:column>
+            <p:column headerText="Fecha de Creacion">
+                <h:outputText value="#{categoria.getFechaDeCreacion()}"/>
+            </p:column>
+            <p:column headerText="Estado">
+                <h:outputText value="#{categoria.getEstado()}"/>
+            </p:column>
+            <p:column headerText="Fecha de Modificacion">
+                <h:outputText value="#{categoria.getFechaDeModificacion()}"/>
+            </p:column>
+        </p:dataTable>
+          </h:form>
 
 
       </h:body>
