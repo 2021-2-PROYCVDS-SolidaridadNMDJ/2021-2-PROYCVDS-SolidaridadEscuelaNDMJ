@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.eci.cvds.samples.persistence.mybatisimpl.mappers.RespuestaMapper">
+
+
+    <insert parameterType="map" id="insertarRespuesta">
+        insert into respuesta(idrespuesta, nombre, comentarios, fechacreacion, comentarios, fechacreacion, pertenecea) values
+        (#{respuesta.idRespuesta}, #{respuesta.nombre}, #{respuesta.comentarios}, #{respuesta.fechacreacion}, #{respuesta.pertenecea})
+    </insert>
+
+    <select id="consultarRespuesta" parameterType='map' resultMap="CategoriaResult">
+        SELECT * from respuesta where idrespuesta=#{idrespuesta};
+    </select>
+
+    <resultMap id="RespuestaResult" type="Usuario">
+        <id property="idrespuesta" column="idrespuesta"/>
+        <result property="nombre" column="nombre"/>
+        <result property="comentarios" column="comentarios"/>
+        <result property="fechacreacion" column="fechacreacion"/>
+        <result property="pertenecea" column="pertenecea"/>
+    </resultMap>
+
+
+
+</mapper>
