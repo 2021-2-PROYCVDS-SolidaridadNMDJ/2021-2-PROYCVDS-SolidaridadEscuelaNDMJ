@@ -20,7 +20,7 @@
         </center>
         <br></br>
     </h:form>
-    <h:form id="busquedaUsuario" prependId="false">
+    <!--<h:form id="busquedaUsuario" prependId="false">
         <p:dataTable var="usuarios" value="#{adminBean.consultarTodosLosUsuarios()}" rowkey="#{usuarios.getIdCorreo()}" selection="#{adminBean.usuario}">
             <p:column headerText="Email del Usuario">
                 <p:outputLabel value="#{usuarios.getIdCorreo()}"/>
@@ -30,10 +30,12 @@
                 <p:outputLabel value="#{usuarios.getNombre()}" />
             </p:column>
 
-        </p:dataTable>
-    
+        </p:dataTable>-->
+    <h:form>
         <p:commandButton id="registro" value="Registrar Usuario" actionListener="#{adminBean.redirectRegistroDeUsuario()}"
-            style="background-color: blue; border-radius: 15px; font-family: Quicksand" />   
+            style="background-color: blue; border-radius: 15px; font-family: Quicksand" />
+        <p:commandButton id="registroCategoria" value="Registrar Categoria" actionListener="#{adminBean.redirectRegistroCategorias()}"
+            style="background-color: blue; border-radius: 15px; font-family: Quicksand" />
     </h:form>
 </h:body>
 </html>

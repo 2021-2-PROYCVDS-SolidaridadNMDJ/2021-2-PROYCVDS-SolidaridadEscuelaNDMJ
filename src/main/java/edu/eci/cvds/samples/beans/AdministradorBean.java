@@ -29,6 +29,12 @@ public class AdministradorBean extends BaseBean {
         facesContext.getExternalContext().redirect("sign_up.xhtml");
     }
 
+    public void redirectRegistroCategorias() throws IOException{
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+        facesContext.getExternalContext().redirect("RegistrarCategoria.xhtml");
+    }
+
     public void registrarUsuario(String correo, String nombre, String apellido, String password, String rol) throws SolidaridadException{
         try {
             Usuario usuario = new Usuario(correo, password, nombre, apellido, rol);
