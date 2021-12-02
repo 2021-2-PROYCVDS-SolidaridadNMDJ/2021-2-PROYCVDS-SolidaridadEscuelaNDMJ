@@ -23,6 +23,16 @@ public class Necesidad {
         this.fechaModificacion = fechaModificacion;
     }
 
+    public Necesidad(String id_categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion){
+        this.id = id;
+        this.id_categoria = id_categoria;
+        this.descripcion = descripcion;
+        this.estado = estado;
+        this.nombre = nombre;
+        this.urgencia = urgencia;
+        this.fechaCreacion = fechaCreacion;
+        this.fechaModificacion = fechaModificacion;
+    }
     public Necesidad(){
 
     }

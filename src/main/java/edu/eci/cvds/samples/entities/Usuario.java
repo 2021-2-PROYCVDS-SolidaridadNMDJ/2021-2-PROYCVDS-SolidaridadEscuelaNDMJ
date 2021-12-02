@@ -14,6 +14,7 @@ public class Usuario{
         this.apellido=apellido;
         this.rol = rol;
     }
+    
     public Usuario(){
 
     }
