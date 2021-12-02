@@ -27,7 +27,10 @@
             <p:inputText id="nombreCategoria" type="String"  binding="#{nombreCategoria}"/>
 
             <p:outputLabel for="estado" value="Estado: "/>
-            <p:inputText id="descripcion" type="String" binding="#{estado}"/>
+            <p:inputText id="estado" type="String" binding="#{estado}"/>
+            
+            <p:commandButton actionListener="#{OfertaBean.registrarOferta(nombreCategoria.value,nombre.value,descripcion.value,estado.value)}" value="Registrar Oferta"
+        style="background-color: blue; border-radius: 15px; font-family: Quicksand"/>
         </h:panelGrid>
   
     </h:form>

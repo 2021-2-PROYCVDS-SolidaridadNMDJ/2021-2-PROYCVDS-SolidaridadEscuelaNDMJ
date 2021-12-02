@@ -16,6 +16,38 @@ import java.util.List;
 @ManagedBean(name = "OfertaBean")
 @ApplicationScoped
 public class OfertaBean extends BaseBean{
-    
+
+    @Inject
+    private OfertaService ofertaService;
+
+    public Oferta consultarOferta(String nombre) throws SolidaridadException{
+        try{
+            return ofertaService.consultarOferta(nombre);
+
+        }catch (Exception e){
+            e.printStackTrace();
+            throw new SolidaridadException("La oferta no existe");
+        }
+    }
+
+    public void registrarOferta( String nombreCategoria,String nombre, String descripcion, String estado)throws SolidaridadException{
+
+        try{
+           
+                ofertaService.registrarOferta(new Oferta(nombreCategoria, nombre,descripcion,estado));
+
+         } catch (Exception e){
+                e.printStackTrace();
+                throw new SolidaridadException("La Oferta  no es valida");
+                
+            }
+        }
+        public List<Oferta> consultarOfertas() throws SolidaridadException{
+            try{
+                return ofertaService.consultarOfertas();
+            }catch (Exception e){
+                throw new SolidaridadException("Error al consultar las ofertas ");
+            }
+        }
 
 }
