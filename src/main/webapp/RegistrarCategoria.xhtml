@@ -14,7 +14,8 @@
     
     
     
-    <input type="button" value="Click me"/>
+    <p:commandButton id="Consulta" value="Consulta Categoria" actionListener="#{CategoriaBean.redirectConsultarCategorias()}"
+    style="background-color: red; border-radius: 15px; font-family: Quicksand" />
     <h:form>
         <h2>Hola Mundo</h2>
         <h:panelGrid id="grid" cellpadding="2" columns="2">
@@ -39,8 +40,7 @@
 
 
     </h:form> 
-    <p:commandButton id="registroCategoria" value="Registrar Categoria" actionListener="#{CategoriaBean.redirectConsultarCategorias()}"
-    style="background-color: red; border-radius: 15px; font-family: Quicksand" />
+    
 
 </h:body>
 </html>
