@@ -28,7 +28,7 @@ public class CategoriaBean extends BaseBean{
         }
     }
 
-    public void eliminarCategoria( String nombre, String idCategoria)throws SolidaridadException{
+    public void eliminarCategoria(  String idCategoria)throws SolidaridadException{
         try{
             categoriasService.eliminarCategoria( idCategoria);
         }catch (Exception e){
