@@ -12,7 +12,7 @@ public class Necesidad {
     private String estado;
     private Date fechaModificacion;
 
-    public Necesidad(int id, String id_categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion){
+    /**public Necesidad(int id, String id_categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion){
         this.id = id;
         this.id_categoria = id_categoria;
         this.descripcion = descripcion;
@@ -21,7 +21,7 @@ public class Necesidad {
         this.urgencia = urgencia;
         this.fechaCreacion = fechaCreacion;
         this.fechaModificacion = fechaModificacion;
-    }
+    }**/
 
     public Necesidad(String id_categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion){
         this.id = id;
