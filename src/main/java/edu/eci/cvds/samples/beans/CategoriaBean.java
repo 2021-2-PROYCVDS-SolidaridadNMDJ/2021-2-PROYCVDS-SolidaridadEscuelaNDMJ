@@ -11,6 +11,9 @@ import org.primefaces.model.chart.*;
 import javax.annotation.PostConstruct;
 import java.sql.Date;
 import java.util.List;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 @ManagedBean(name = "CategoriaBean")
 @ApplicationScoped
@@ -58,5 +61,10 @@ public class CategoriaBean extends BaseBean{
             }
         }
 
+        public void redirectConsultarCategorias() throws IOException{
+            FacesContext facesContext = FacesContext.getCurrentInstance();
+            HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+            facesContext.getExternalContext().redirect("RegistrarCategoria.xhtml");
+        }
 
 }
