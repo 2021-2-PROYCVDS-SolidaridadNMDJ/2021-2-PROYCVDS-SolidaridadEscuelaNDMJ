@@ -14,7 +14,7 @@
 
     </insert>
     <resultMap id="NecesidadxNombres" type="Necesidad">
-        <id property="id" column="id" />
+        <!--<id property="id" column="id" />-->
         <result property="id_categoria" column="id_categoria"/>
         <result property="nombre" column="nombre"/>
         <result property="descripcion" column="descripcion"/>
