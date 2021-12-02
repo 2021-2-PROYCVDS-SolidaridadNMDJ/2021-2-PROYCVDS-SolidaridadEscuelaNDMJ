@@ -15,8 +15,7 @@
     </insert>
     <resultMap id="NecesidadxNombres" type="Necesidad">
         <id property="id" column="id" />
-         <association property='id_categoria' javaType="Categoria"  resultMap="edu.eci.cvds.resources.mappers.CategoriaMapper.CategoriaResult" columnPrefix='categoria_'></association>
-        <result property="id_categoria" column="id_categoria"/>
+        <association property='id_categoria' javaType="Categoria"  resultMap="edu.eci.cvds.resources.mappers.CategoriaMapper.CategoriaResult" columnPrefix='categoria_'></association>
         <result property="nombre" column="nombre"/>
         <result property="descripcion" column="descripcion"/>
         <result property="urgencia" column="urgencia"/>
