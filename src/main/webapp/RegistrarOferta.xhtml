@@ -8,5 +8,29 @@
     <title> Registrar Ofertas </title>
 </h:head>
 <h:body style="background-color:#ff2600;">
+    <style>
+        h1{
+            text-align:center;
+        }
+    </style>
+    <h1> Registar Oferta</h1>
+    <h:form>
+    <h:panelGrid id="grid" cellpadding="2" columns="2">
+
+            <p:outputLabel for="nombre" value="Nombre Oferta: "/>
+            <p:inputText id="nombre" type="String"  binding="#{nombre}"/>
+
+            <p:outputLabel for="descripcion" value="Descripcion Oferta: "/>
+            <p:inputText id="descripcion" type="String" binding="#{descripcion}"/>
+
+            <p:outputLabel for="nombreCategoria" value="Nombre Categoria a la que pertenece: "/>
+            <p:inputText id="nombreCategoria" type="String"  binding="#{nombreCategoria}"/>
+
+            <p:outputLabel for="estado" value="Estado: "/>
+            <p:inputText id="descripcion" type="String" binding="#{estado}"/>
+        </h:panelGrid>
+  
+    </h:form>
 
 </h:body>
+</html>
