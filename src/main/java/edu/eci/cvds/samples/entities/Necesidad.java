@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Necesidad {
     private int id;
-    private String categoria;
+    private String id_categoria;
     private String nombre;
     private String descripcion;
     private String urgencia;
@@ -12,9 +12,9 @@ public class Necesidad {
     private String estado;
     private Date fechaModificacion;
 
-    public Necesidad(int id,String categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion){
+    public Necesidad(int id,String id_categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion){
         this.id = id;
-        this.categoria = categoria;
+        this.id_categoria = id_categoria;
         this.descripcion = descripcion;
         this.estado = estado;
         this.nombre = nombre;
@@ -44,7 +44,7 @@ public class Necesidad {
     }
 
     public String getCategoria() {
-        return categoria;
+        return id_categoria;
     }
 
     public String getDescripcion() {
@@ -67,8 +67,8 @@ public class Necesidad {
         this.id = id;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCategoria(String id_categoria) {
+        this.id_categoria = id_categoria;
     }
 
     public void setDescripcion(String descripcion) {
