@@ -27,7 +27,7 @@ public class OfertaServiceIMPL implements OfertaService {
             return ofertaDAO.load();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new SolidaridadException("No se encuentran clientes");
+            throw new SolidaridadException("No se encuentran ofertas");
         }
     }
 

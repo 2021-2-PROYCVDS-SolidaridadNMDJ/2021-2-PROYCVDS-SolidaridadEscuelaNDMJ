@@ -8,20 +8,20 @@ import java.util.UUID;
 
 public class Oferta {
     private String idOferta;
-    private String idCategoria;
+    private String nombreCategoria;
     private String nombre;
     private String descripcion;
     private Date fechacreacion;
     private String estado;
     private Date fechamodificacion;
 
-    public Oferta(String idCategoria,String nombre,String descripcion,String estado){
+    public Oferta(String nombreCategoria,String nombre,String descripcion,String estado){
       byte[] array = new byte[10]; // length is bounded by 10
       new Random().nextBytes(array);
       String generatedString = new String(array, Charset.forName("UTF-8"));
         
         this.idOferta= generatedString;
-        this.idCategoria=idCategoria;
+        this.nombreCategoria = nombreCategoria;
         this.nombre=nombre;
         this.descripcion=descripcion;
         this.fechacreacion= Date.valueOf(LocalDate.now());
@@ -37,8 +37,8 @@ public class Oferta {
         this.idOferta = idOferta;
      }
 
-     public String getIdCategoria() {
-        return this.idCategoria;
+     public String getnombreCategoria() {
+        return this.nombreCategoria;
      }
 
      public String getNombre() {
