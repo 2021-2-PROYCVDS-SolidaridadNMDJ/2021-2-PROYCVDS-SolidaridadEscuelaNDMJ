@@ -16,11 +16,9 @@ public class Oferta {
     private Date fechamodificacion;
 
     public Oferta(String nombreCategoria,String nombre,String descripcion,String estado){
-      byte[] array = new byte[10]; // length is bounded by 10
-      new Random().nextBytes(array);
-      String generatedString = new String(array, Charset.forName("UTF-8"));
+      
         
-        this.idOferta= generatedString;
+        this.idOferta= UUID.randomUUID().toString();
         this.nombreCategoria = nombreCategoria;
         this.nombre=nombre;
         this.descripcion=descripcion;
