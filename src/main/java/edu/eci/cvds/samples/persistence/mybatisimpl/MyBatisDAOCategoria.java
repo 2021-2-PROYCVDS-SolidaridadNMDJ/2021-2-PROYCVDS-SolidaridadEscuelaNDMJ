@@ -26,10 +26,10 @@ public class MyBatisDAOCategoria  implements CategoriasDAO {
     
 
     @Override
-    public void delete(String nombre, String idCategoria) throws SolidaridadException {
+    public void delete( String idCategoria) throws SolidaridadException {
 
         try{
-            categoriaMapper.eliminarCategoria(nombre,idCategoria);
+            categoriaMapper.eliminarCategoria(idCategoria);
         }catch (Exception e){
             
             throw new SolidaridadException("Error al eliminar  ",e);

@@ -7,7 +7,7 @@ public interface CategoriaMapper {
 
     void insertarCategoria(@Param("categoria") Categoria categoria);
 
-    void eliminarCategoria(@Param("nombre") String nombre,@Param("idCategoria") String idCategoria);
+    void eliminarCategoria(@Param("idCategoria") String idCategoria);
 
     Categoria consultarCategoria(@Param("nombre") String nombre);
 

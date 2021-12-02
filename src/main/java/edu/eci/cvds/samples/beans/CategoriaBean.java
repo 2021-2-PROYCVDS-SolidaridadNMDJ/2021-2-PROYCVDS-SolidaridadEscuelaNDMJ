@@ -30,7 +30,7 @@ public class CategoriaBean extends BaseBean{
 
     public void eliminarCategoria( String nombre, String idCategoria)throws SolidaridadException{
         try{
-            categoriasService.eliminarCategoria(nombre, idCategoria);
+            categoriasService.eliminarCategoria( idCategoria);
         }catch (Exception e){
             
             e.printStackTrace();
