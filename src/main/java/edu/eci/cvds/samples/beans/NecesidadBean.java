@@ -24,7 +24,7 @@ public class NecesidadBean extends BaseBean {
 
      public void registrarNecesidad(String id_categoria,String nombre,String descripcion,String urgencia)throws SolidaridadException{
          try {
-            Necesidad necesidad = new Necesidad(1,id_categoria, nombre, descripcion, urgencia, new Date((new java.util.Date()).getTime()),"En Proceso", new Date((new java.util.Date()).getTime()));
+            Necesidad necesidad = new Necesidad(id_categoria, nombre, descripcion, urgencia, new Date((new java.util.Date()).getTime()),"En Proceso", new Date((new java.util.Date()).getTime()));
             necesidadService.registrarNecesidad(necesidad);
             this.message = "La necesidad se registro correctamente";
         } catch (Exception e){

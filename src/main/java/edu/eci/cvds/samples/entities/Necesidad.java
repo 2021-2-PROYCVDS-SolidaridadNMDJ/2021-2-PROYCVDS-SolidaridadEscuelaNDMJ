@@ -3,7 +3,7 @@ package edu.eci.cvds.samples.entities;
 import java.util.Date;
 
 public class Necesidad {
-    private int id;
+    //private int id;
     private String id_categoria;
     private String nombre;
     private String descripcion;
@@ -12,8 +12,8 @@ public class Necesidad {
     private String estado;
     private Date fechaModificacion;
 
-    public Necesidad(int id,String id_categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion){
-        this.id = id;
+    public Necesidad(String id_categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion){
+        //this.id = id;
         this.id_categoria = id_categoria;
         this.descripcion = descripcion;
         this.estado = estado;
@@ -39,9 +39,9 @@ public class Necesidad {
         return fechaModificacion;
     }
 
-    public int getId() {
+    /**public int getId() {
         return id;
-    }
+    }*/
 
     public String getCategoria() {
         return id_categoria;
@@ -63,9 +63,9 @@ public class Necesidad {
         this.nombre = nombre;
     }
 
-    public void setId(int id) {
+    /**public void setId(int id) {
         this.id = id;
-    }
+    }*/
 
     public void setCategoria(String id_categoria) {
         this.id_categoria = id_categoria;
