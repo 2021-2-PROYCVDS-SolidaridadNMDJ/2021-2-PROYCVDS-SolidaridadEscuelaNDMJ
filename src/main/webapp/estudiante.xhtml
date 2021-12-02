@@ -31,6 +31,8 @@
             </h:selectOneMenu>
             <h:panelGrid id="grid" cellpadding="2" columns="2">
                 
+                <h:outputLabel style="color: black;" for="Categoria" value="Categoria" />
+                <h:inputText id="Categoria" required="true" type="String" binding="#{id_categoria}" />
 
                 <h:outputLabel style="color: black;" for="Nombre" value="Nombre" />
                 <h:inputText id="Nombre" required="true" type="String" binding="#{nombre}" />
@@ -44,7 +46,7 @@
             </h:panelGrid>
 
             <p:commandButton class="Button" value="Registrar Necesidad"
-                actionListener="#{necesidadBean.registrarNecesidad(nombre.value,descripcion.value,urgencia.value)}"
+                actionListener="#{necesidadBean.registrarNecesidad(id_categoria.value,nombre.value,descripcion.value,urgencia.value)}"
                 ajax="true"> 
             </p:commandButton>
                 

@@ -2,6 +2,7 @@ package edu.eci.cvds.samples.beans;
 
 import com.google.inject.Inject;
 import edu.eci.cvds.samples.entities.Necesidad;
+import edu.eci.cvds.samples.entities.Categoria;
 import edu.eci.cvds.samples.services.SolidaridadException;
 import edu.eci.cvds.samples.services.NecesidadService;
 import javax.enterprise.context.SessionScoped;
@@ -23,9 +24,9 @@ public class NecesidadBean extends BaseBean {
      private String message;
      private String nombre;
 
-     public void registrarNecesidad(String nombre,String descripcion,String urgencia)throws SolidaridadException{
+     public void registrarNecesidad(String id_categoria, String nombre,String descripcion,String urgencia)throws SolidaridadException{
          try {
-            Necesidad necesidad = new Necesidad(nombre, descripcion, urgencia, new Date((new java.util.Date()).getTime()),"En Proceso", new Date((new java.util.Date()).getTime()));
+            Necesidad necesidad = new Necesidad(id_categoria, nombre, descripcion, urgencia, new Date((new java.util.Date()).getTime()),"En Proceso", new Date((new java.util.Date()).getTime()));
             necesidadService.registrarNecesidad(necesidad);
             this.message = "La necesidad se registro correctamente";
         } catch (Exception e){
@@ -41,4 +42,5 @@ public class NecesidadBean extends BaseBean {
      public void setNombre(String nombre){
          this.nombre = nombre;
      }
+
 }
