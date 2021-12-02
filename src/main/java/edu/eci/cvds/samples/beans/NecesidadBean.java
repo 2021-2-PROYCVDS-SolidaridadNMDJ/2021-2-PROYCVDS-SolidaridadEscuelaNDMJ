@@ -22,7 +22,7 @@ public class NecesidadBean extends BaseBean {
      private NecesidadService necesidadService;
      private String message;
 
-     public void registrarNecesidad(int id, String id_categoria,String nombre,String descripcion,String urgencia)throws SolidaridadException{
+     public void registrarNecesidad(String id_categoria,String nombre,String descripcion,String urgencia)throws SolidaridadException{
          try {
             Necesidad necesidad = new Necesidad(id, id_categoria, nombre, descripcion, urgencia, new Date((new java.util.Date()).getTime()),"En Proceso", new Date((new java.util.Date()).getTime()));
             necesidadService.registrarNecesidad(necesidad);
