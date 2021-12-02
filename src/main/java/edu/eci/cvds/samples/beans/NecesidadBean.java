@@ -11,7 +11,6 @@ import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
-//import java.sql.Date;
 import java.util.Date;
 
 @SuppressWarnings("deprecation")
