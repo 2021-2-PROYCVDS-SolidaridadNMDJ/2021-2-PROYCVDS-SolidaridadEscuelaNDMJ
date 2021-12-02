@@ -9,6 +9,10 @@
         SELECT * FROM Necesidad WHERE nombre = #{Nombre};
     </select>
 
+    <select id="consultarNecesidades" parameterType='map' resultMap="NecesidadxNombres">
+        SELECT * FROM Necesidad;
+    </select>
+
     <insert id="registrarNecesidad" parameterType="map">
         INSERT INTO Necesidad(id_categoria, nombre, descripcion, urgencia, fechacreacion, estado, fechamodificacion) VALUES (#{Necesidad.id_categoria},#{Necesidad.nombre},#{Necesidad.descripcion},#{Necesidad.urgencia},#{Necesidad.fechaCreacion},#{Necesidad.estado},#{Necesidad.fechaModificacion})
 

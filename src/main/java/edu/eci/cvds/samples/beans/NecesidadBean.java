@@ -35,6 +35,16 @@ public class NecesidadBean extends BaseBean {
         }
      }
 
+     public List<Necesidad> consultarNecesidades() throws SolidaridadException{
+         try{
+             return necesidadService.consultarNecesidades();
+
+         }catch (Exception e){
+            e.printStackTrace();
+            throw new SolidaridadException("Hubo un error al consultar las necesidades");
+        }
+     }
+
      public String getNombre(){
          return nombre;
      }

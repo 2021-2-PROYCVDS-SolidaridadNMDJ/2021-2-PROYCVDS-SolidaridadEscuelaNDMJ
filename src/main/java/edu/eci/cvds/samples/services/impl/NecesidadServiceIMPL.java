@@ -12,8 +12,13 @@ public class NecesidadServiceIMPL implements NecesidadService {
     private NecesidadDAO DAOnec;
 
     @Override
-    public List<Necesidad> consultarNecesidad(String nombre){
+    public Necesidad consultarNecesidad(String nombre){
         return DAOnec.consultarNecesidad(nombre);
+
+    }
+    @Override
+    public List<Necesidad> consultarNecesidades(){
+        return DAOnec.consultarNecesidades();
 
     }
     @Override

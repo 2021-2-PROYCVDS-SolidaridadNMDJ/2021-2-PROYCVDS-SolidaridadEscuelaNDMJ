@@ -10,10 +10,15 @@ import java.util.List;
 public class MyBatisDAONecesidad implements NecesidadDAO {
     @Inject
     private NecesidadMapper necesidadMapper = null;
-    public List<Necesidad> consultarNecesidad(String nombre){
+    public Necesidad consultarNecesidad(String nombre){
         return necesidadMapper.consultarNecesidad(nombre);
 
     }
+
+    public List<Necesidad> consultarNecesidades(){
+        return necesidadMapper.consultarNecesidades();
+    }
+    
     public void registrarNecesidad(Necesidad necesidad){
         necesidadMapper.registrarNecesidad(necesidad);
     }
