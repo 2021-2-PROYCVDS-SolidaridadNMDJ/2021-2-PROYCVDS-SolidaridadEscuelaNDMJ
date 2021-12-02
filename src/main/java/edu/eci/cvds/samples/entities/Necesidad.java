@@ -12,7 +12,8 @@ public class Necesidad {
     private String estado;
     private Date fechaModificacion;
 
-    public Necesidad(String categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion){
+    public Necesidad(int id,String categoria,String nombre,String descripcion,String urgencia,Date fechaCreacion,String estado,Date fechaModificacion){
+        this.id = id;
         this.categoria = categoria;
         this.descripcion = descripcion;
         this.estado = estado;
