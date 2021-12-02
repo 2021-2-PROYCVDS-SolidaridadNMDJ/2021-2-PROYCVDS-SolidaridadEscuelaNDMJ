@@ -64,7 +64,7 @@ public class CategoriaBean extends BaseBean{
         public void redirectConsultarCategorias() throws IOException{
             FacesContext facesContext = FacesContext.getCurrentInstance();
             HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
-            facesContext.getExternalContext().redirect("RegistrarCategoria.xhtml");
+            facesContext.getExternalContext().redirect("ConsultarCategoria.xhtml");
         }
 
 }
