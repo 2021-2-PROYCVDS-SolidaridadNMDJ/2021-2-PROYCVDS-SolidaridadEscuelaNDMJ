@@ -21,15 +21,24 @@ public class NecesidadBean extends BaseBean {
     @Inject
      private NecesidadService necesidadService;
      private String message;
+     private String nombre;
 
-     public void registrarNecesidad(String id_categoria,String nombre,String descripcion,String urgencia)throws SolidaridadException{
+     public void registrarNecesidad(String nombre,String descripcion,String urgencia)throws SolidaridadException{
          try {
-            Necesidad necesidad = new Necesidad(id_categoria, nombre, descripcion, urgencia, new Date((new java.util.Date()).getTime()),"En Proceso", new Date((new java.util.Date()).getTime()));
+            Necesidad necesidad = new Necesidad(nombre, descripcion, urgencia, new Date((new java.util.Date()).getTime()),"En Proceso", new Date((new java.util.Date()).getTime()));
             necesidadService.registrarNecesidad(necesidad);
             this.message = "La necesidad se registro correctamente";
         } catch (Exception e){
             e.printStackTrace();
             throw new SolidaridadException("Hubo un error al registrar la necesidad");
         }
+     }
+
+     public String getNombre(){
+         return nombre;
+     }
+
+     public void setNombre(String nombre){
+         this.nombre = nombre;
      }
 }

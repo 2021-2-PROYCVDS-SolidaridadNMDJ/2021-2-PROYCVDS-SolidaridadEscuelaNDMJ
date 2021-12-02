@@ -10,11 +10,12 @@
     </select>
 
     <insert id="registrarNecesidad" parameterType="map">
-        INSERT INTO Necesidad(id_categoria, nombre, descripcion, urgencia, fechacreacion, estado, fechamodificacion) VALUES (#{Necesidad.id_categoria},#{Necesidad.nombre},#{Necesidad.descripcion},#{Necesidad.urgencia},#{Necesidad.fechaCreacion},#{Necesidad.estado},#{Necesidad.fechaModificacion})
+        INSERT INTO Necesidad(id_categoria, nombre, descripcion, urgencia, fechacreacion, estado, fechamodificacion) VALUES (#{Necesidad.id_categoria.idCategoria},#{Necesidad.nombre},#{Necesidad.descripcion},#{Necesidad.urgencia},#{Necesidad.fechaCreacion},#{Necesidad.estado},#{Necesidad.fechaModificacion})
 
     </insert>
     <resultMap id="NecesidadxNombres" type="Necesidad">
         <id property="id" column="id" />
+         <association property='id_categoria' javaType="Categoria"  resultMap="edu.eci.cvds.resources.mappers.CategoriaMapper.CategoriaResult" columnPrefix='categoria_'></association>
         <result property="id_categoria" column="id_categoria"/>
         <result property="nombre" column="nombre"/>
         <result property="descripcion" column="descripcion"/>
