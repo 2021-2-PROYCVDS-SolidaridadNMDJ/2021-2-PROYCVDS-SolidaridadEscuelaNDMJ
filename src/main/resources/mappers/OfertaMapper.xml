@@ -6,17 +6,17 @@
 <mapper namespace="edu.eci.cvds.samples.persistence.mybatisimpl.mappers.OfertaMapper">
 
     <select id="consultarOfertas" parameterType="map" resultMap="OfertaResult">
-        select * from ofertas;
+        select * from oferta;
     </select>
 
     <insert parameterType="map" id="insertarOferta">
-        insert into ofertas(nombreCategoria,nombre,descripcion,fechacreacion,estado,fechamodificacion,idoferta,) values
+        insert into oferta(nombreCategoria,nombre,descripcion,fechacreacion,estado,fechamodificacion,idoferta,) values
         (#{oferta.nombreCategoria},#{oferta.nombre},#{oferta.descripcion},#{oferta.fechacreacion},
         #{oferta.estado},#{oferta.fechamodificacion},#{oferta.idOferta},)
     </insert>
 
     <select id="consultarOferta" parameterType="map" resultMap="OfertaResult">
-        select * from ofertas where nombre=#{nombre};
+        select * from oferta where nombre=#{nombre};
     </select>
 
     <resultMap id="OfertaResult" type="Oferta" >
