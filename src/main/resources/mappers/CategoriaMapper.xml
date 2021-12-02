@@ -12,7 +12,7 @@
     </insert>
 
     <delete id="eliminarCategoria" parameterType="map">
-        DELETE from categoria where  idCategoria=#{idCategoria};
+        DELETE from categoria where idCategoria=#{idCategoria};
     </delete>
 
     <select id="consultarCategoria" parameterType='map' resultMap="CategoriaResult">

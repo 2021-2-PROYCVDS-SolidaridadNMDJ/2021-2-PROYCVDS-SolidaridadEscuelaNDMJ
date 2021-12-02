@@ -10,7 +10,7 @@
     </select>
 
     <insert id="registrarNecesidad" parameterType="map">
-        INSERT INTO Necesidad(id_categoria, nombre, descripcion, urgencia, fechacreacion, estado, fechamodificacion) VALUES (#{Necesidad.id_categoria.idCategoria},#{Necesidad.nombre},#{Necesidad.descripcion},#{Necesidad.urgencia},#{Necesidad.fechaCreacion},#{Necesidad.estado},#{Necesidad.fechaModificacion})
+        INSERT INTO Necesidad(id_categoria, nombre, descripcion, urgencia, fechacreacion, estado, fechamodificacion) VALUES (#{Necesidad.id_categoria},#{Necesidad.nombre},#{Necesidad.descripcion},#{Necesidad.urgencia},#{Necesidad.fechaCreacion},#{Necesidad.estado},#{Necesidad.fechaModificacion})
 
     </insert>
     <resultMap id="NecesidadxNombres" type="Necesidad">
