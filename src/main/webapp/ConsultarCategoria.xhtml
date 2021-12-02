@@ -18,7 +18,7 @@
           <h:form>
             <p:dataTable var="categoria" value="#{CategoriaBean.consultarCategorias()}"
             aginator="true" paginatorTemplate="{FirstPageLink} {PreviousPageLink} {CurrentPageReport} {NextPageLink} {LastPageLink}"
-                     rows="10" selectionMode="single" id="idCategoria"
+                     rows="100" selectionMode="single" id="idCategoria"
                      rowKey="#{categoria.getIdCategoria()}">
                      <f:facet name="header"> Categorias </f:facet>
             <p:column headerText="idCategoria">
