@@ -23,12 +23,13 @@
                 <h1>Registro de Necesidad</h1>
             </center>
             <br></br>
-
+            <h:selectOneMenu value="#{necesidadBean.nombre}">
+                <f:selectItem itemValue="" itemLabel="" />
+                <f:selectItem itemValue="Ciencia Ficcion" itemLabel="Ciencia Ficcion" />
+                <f:selectItem itemValue="Super Heroes" itemLabel="Super Heroes" />
+            </h:selectOneMenu>
             <h:panelGrid id="grid" cellpadding="2" columns="2">
-                <h:selectOneMenu value="#{necesidadBean.nombre}">
-                    <f:selectItem itemValue="Ciencia Ficcion" itemLabel="Ciencia Ficcion" />
-                    <f:selectItem itemValue="Super Heroes" itemLabel="Super Heroes" />
-                </h:selectOneMenu>
+                
 
                 <h:outputLabel style="color: black;" for="Nombre" value="Nombre" />
                 <h:inputText id="Nombre" required="true" type="String" binding="#{nombre}" />
