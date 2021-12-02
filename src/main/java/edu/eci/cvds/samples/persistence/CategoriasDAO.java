@@ -8,7 +8,7 @@ import java.util.List;
 public interface CategoriasDAO {
 
     void save(Categoria categoria) throws SolidaridadException;
-    void delete(String nombre, String idCategoria) throws SolidaridadException;
+    void delete( String idCategoria) throws SolidaridadException;
     Categoria load(String nombre) throws SolidaridadException;  
     List<Categoria> load() throws SolidaridadException; 
     

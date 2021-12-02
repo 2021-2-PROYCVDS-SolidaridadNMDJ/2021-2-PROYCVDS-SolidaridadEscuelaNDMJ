@@ -45,11 +45,11 @@ public class CategoriasServiceImpl implements CategoriasService {
     }
  
     @Override
-    public void eliminarCategoria(String nombre,String idCategoria) throws SolidaridadException {
+    public void eliminarCategoria(String idCategoria) throws SolidaridadException {
         try{
-            categoriasDAO.delete(nombre, idCategoria);
+            categoriasDAO.delete( idCategoria);
         }catch (Exception e){
-            System.out.println("2");
+            System.out.println("Error al eliminar");
             e.printStackTrace();
         } 
         

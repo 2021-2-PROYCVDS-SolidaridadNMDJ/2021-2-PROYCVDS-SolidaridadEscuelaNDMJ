@@ -11,5 +11,5 @@ public interface CategoriasService {
 
     public abstract List<Categoria> consultarCategorias() throws SolidaridadException;
     
-    public void eliminarCategoria(String nombre, String idCategoria) throws SolidaridadException;
+    public void eliminarCategoria(String idCategoria) throws SolidaridadException;
 }

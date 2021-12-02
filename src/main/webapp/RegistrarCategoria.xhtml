@@ -28,6 +28,17 @@
         <p:commandButton actionListener="#{CategoriaBean.registrarCategoria(nombre.value,descripcion.value)}" value="Registrar Categoria"/>
         
     </h:form>
+
+    <h:form>
+        <h:panelGrid  cellpadding="2" columns="2"></h:panelGrid>
+        <h3>Eliminar Categoria</h3>
+        <p:outputLabel for="eidCategoria" value="ID de la categoria a Eliminar: "/>
+        <p:inputText id="eidCategoria" type="String" binding="#{eidCategoria}"/>
+        <p:commandButton actionListener="#{CategoriasBean.eliminarCategoria(eidCategoria.value)}" value="Eliminar Categoria"/>
+
+
+
+    </h:form> 
     
 
 </h:body>
