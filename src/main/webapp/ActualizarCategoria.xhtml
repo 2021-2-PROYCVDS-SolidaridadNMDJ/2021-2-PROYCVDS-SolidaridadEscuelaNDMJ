@@ -5,9 +5,16 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
-    <title> Registrar Categorias </title>
+    <title> Actualizar Categoria </title>
 </h:head>
 <h:body style="background-color:#00ccff;">
+    <style>
+        h1{
+            text-align:center;
+        }
+    </style>
+    <h1> Registar Oferta</h1>
+
     <h:panelGrid  cellpadding="2" columns="2" >
 
             <p:outputLabel for="aNombre" value="Categoria a actualizar"/>
@@ -22,7 +29,8 @@
             <p:outputLabel for="estado" value="Nuevo Estado"/>
             <p:inputText id="estado" type="String" binding="#{estado}"/>
 
-            <p:commandButton actionListener="#{CategoriaBean.actualizarCategoria(aNombre.value,nNombre.value,descripcion.value,estado.value)}" value="Actualizar Categoria"/>
+            <p:commandButton actionListener="#{CategoriaBean.actualizarCategoria(aNombre.value,nNombre.value,descripcion.value,estado.value)}" value="Actualizar Categoria"
+            style="background-color: red; border-radius: 15px; font-family: Quicksand"/>
         </h:panelGrid>
 </h:body>
 

@@ -76,4 +76,10 @@ public class CategoriaBean extends BaseBean{
                 throw new SolidaridadException("Error al actualizar la categoria "+nombre);
             }
         }
+
+        public void redirectActualizarCategorias() throws IOException{
+            FacesContext facesContext = FacesContext.getCurrentInstance();
+            HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
+            facesContext.getExternalContext().redirect("ActualizarCategoria.xhtml");
+        }
 }
