@@ -10,6 +10,6 @@ public interface CategoriaMapper {
     void eliminarCategoria(@Param("idCategoria") String idCategoria);
 
     Categoria consultarCategoria(@Param("nombre") String nombre);
-
+    void update(@Param("categoria") Categoria categoria, @Param("aNombre") String aNombre);
     List<Categoria> consultarCategorias();
 }

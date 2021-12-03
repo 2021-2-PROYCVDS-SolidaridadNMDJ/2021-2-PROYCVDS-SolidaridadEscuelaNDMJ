@@ -11,4 +11,5 @@ public interface OfertaMapper {
     List<Oferta> consultarOfertas();
     Oferta consultarOferta(@Param("nombre") String nombre);
     
+    
 }

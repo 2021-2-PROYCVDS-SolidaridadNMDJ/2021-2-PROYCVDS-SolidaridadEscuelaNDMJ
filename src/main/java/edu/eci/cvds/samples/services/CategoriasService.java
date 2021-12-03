@@ -10,6 +10,6 @@ public interface CategoriasService {
     public Categoria consultarCategoria(String nombre) throws SolidaridadException;
 
     public abstract List<Categoria> consultarCategorias() throws SolidaridadException;
-    
+    public abstract void actualizarCategoria(String categoriaNombre, String nombre, String descripcion, String estado) throws SolidaridadException, PSQLException;
     public void eliminarCategoria(String idCategoria) throws SolidaridadException;
 }

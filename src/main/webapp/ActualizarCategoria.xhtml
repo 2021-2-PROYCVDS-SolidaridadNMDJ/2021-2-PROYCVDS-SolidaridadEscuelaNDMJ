@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title> Registrar Categorias </title>
+</h:head>
+<h:body style="background-color:#00ccff;">
+    <h:panelGrid  cellpadding="2" columns="2" >
+
+            <p:outputLabel for="aNombre" value="Categoria a actualizar"/>
+            <p:inputText id="aNombre" type="String" binding="#{aNombre}"/>
+
+            <p:outputLabel for="nNombre" value="Nueva Categoria"/>
+            <p:inputText id="nNombre" type="String" binding="#{nNombre}"/>
+
+            <p:outputLabel for="descripcion" value="Nueva Descripcion"/>
+            <p:inputTextarea id="descripcion" type="String" rows="5" cols="33" binding="#{descripcion}"/>
+
+            <p:outputLabel for="estado" value="Nuevo Estado"/>
+            <p:inputText id="estado" type="String" binding="#{estado}"/>
+
+            <p:commandButton actionListener="#{CategoriaBean.actualizarCategoria(aNombre.value,nNombre.value,descripcion.value,estado.value)}" value="Actualizar Categoria"/>
+        </h:panelGrid>
+</h:body>
+
+</html>

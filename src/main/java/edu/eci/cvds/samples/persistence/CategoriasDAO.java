@@ -11,5 +11,5 @@ public interface CategoriasDAO {
     void delete( String idCategoria) throws SolidaridadException;
     Categoria load(String nombre) throws SolidaridadException;  
     List<Categoria> load() throws SolidaridadException; 
-    
+    void update(Categoria categoriaNombre, String nombre, String descripcion, String estado) throws SolidaridadException, PSQLException;
 }

@@ -54,4 +54,24 @@ public class MyBatisDAOCategoria  implements CategoriasDAO {
             throw new SolidaridadException("Error al consultar las categorias ",e);
         }
     }
+
+    @Override
+    public void update(Categoria categoria, String nombre, String descripcion, String estado) throws SolidaridadException, PSQLException {
+        try{
+            String aNombre = categoria.getNombre();
+            if (nombre != null){
+                categoria.setNombre(nombre);
+            }
+            if (descripcion != null){
+                categoria.setDescripcion(descripcion);
+            }
+            if (descripcion != null){
+                categoria.setEstado(estado);
+            }
+            categoriaMapper.update(categoria,aNombre);
+
+        }catch (Exception e){
+            throw new SolidaridadException("Error al actualizar la categoria "+nombre);
+        }
+    }
 }

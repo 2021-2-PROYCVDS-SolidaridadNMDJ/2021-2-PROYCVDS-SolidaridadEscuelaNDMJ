@@ -61,10 +61,19 @@ public class CategoriaBean extends BaseBean{
             }
         }
 
+
+
         public void redirectConsultarCategorias() throws IOException{
             FacesContext facesContext = FacesContext.getCurrentInstance();
             HttpSession session = (HttpSession) facesContext.getExternalContext().getSession(true);
             facesContext.getExternalContext().redirect("ConsultarCategoria.xhtml");
         }
 
+        public void actualizarCategoria(String nombreCategoria, String nombre, String descripcion, String estado) throws SolidaridadException, PSQLException {
+            try{
+                categoriasService.actualizarCategoria(nombreCategoria,nombre,descripcion,estado);
+            }catch (Exception e){
+                throw new SolidaridadException("Error al actualizar la categoria "+nombre);
+            }
+        }
 }

@@ -23,6 +23,11 @@
         SELECT * from categoria ;
     </select>
 
+    <update id="update" parameterType="map">
+        update categoria set nombre=#{categoria.nombre}, descripcion=#{categoria.descripcion}, estado=#{categoria.estado},
+        fechamodificacion=CURRENT_DATE where nombre=#{aNombre}
+    </update>
+
 
     <resultMap id="CategoriaResult" type="Categoria">
         <id property="idCategoria" column="idcategoria"/>
